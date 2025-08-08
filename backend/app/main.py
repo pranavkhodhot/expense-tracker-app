@@ -1,12 +1,7 @@
 from fastapi import FastAPI
+from app.api import users
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"Hello" : "World"}
-
-# @app.get("/categories")
-# def get_category():
-#     return 
+app.include_router(users.router, prefix="/users", tags=["Users"])
 
