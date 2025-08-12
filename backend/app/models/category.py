@@ -8,3 +8,5 @@ class Category(Base):
     category_id = Column(Integer, primary_key=True, index=True)
     category_name = Column(String, nullable=False, unique=True)
     budgets = relationship("Budget", back_populates="category")
+    transactions = relationship("Transaction", back_populates="category")
+
