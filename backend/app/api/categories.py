@@ -10,7 +10,7 @@ router = APIRouter()
 def create_category(category: category_schema.CategoryCreate, db: Session = Depends(get_db)):
     db_category = category_crud.get_category_by_name(db, name=category.category_name)
     if db_category:
-        raise HTTPException(status_code=400, detail="Category already registered")
+        raise HTTPException(status_code=400, detail="Category already exists")
     return category_crud.create_category(db=db, category=category)
 
 @router.get("/", response_model=list[category_schema.CategoryOut])
