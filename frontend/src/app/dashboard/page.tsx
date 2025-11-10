@@ -1,8 +1,12 @@
-'use client';
-import React from 'react';
 
-const Dashboard = () => {
+import Sidebar from "../Sidebar/Sidebar";
+const DashboardPage = () => {
+
+
+
   return (
+    <>
+    <Sidebar/>
     <div className="flex-1 sm:ml-64 p-6 bg-gray-100 min-h-screen transition-all duration-300">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
@@ -47,6 +51,7 @@ const Dashboard = () => {
                 <th className="py-3 px-6 text-left">Date</th>
                 <th className="py-3 px-6 text-left">Category</th>
                 <th className="py-3 px-6 text-left">Amount</th>
+                <th className="py-3 px-6 text-left">Amount</th>
               </tr>
             </thead>
             <tbody className="text-gray-700 text-sm font-light">
@@ -75,7 +80,8 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
-export default Dashboard;
+export default DashboardPage
