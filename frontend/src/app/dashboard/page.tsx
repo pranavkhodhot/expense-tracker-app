@@ -1,9 +1,6 @@
 
 import Sidebar from "../Sidebar/Sidebar";
 const DashboardPage = () => {
-
-
-
   return (
     <>
     <Sidebar/>
