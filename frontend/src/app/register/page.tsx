@@ -4,11 +4,29 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
 const RegisterPage = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     const [error, setError] = useState<string | null>(null)
     const router = useRouter()
     const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault()
     
+        try {
+          const response = await fetch('http://127.0.0.1:8000/auth/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, password })
+          })
+    
+          if (!response.ok) throw new Error('Email already in use')
+    
+          const data = await response.json()
+          localStorage.setItem('token', data.access_token)
+          router.push('/login')
+        } catch (err: any) {
+          setError(err.message || 'Register failed')
+        }
       }
 
 
@@ -23,14 +41,24 @@ const RegisterPage = () => {
               {error}
             </div>
           )}
-
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+            <input
+              type="text"
+              placeholder="John Doe"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              className="w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            />
+          </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Email address</label>
             <input
               type="email"
               placeholder="admin@example.com"
-              //value={email}
-              //onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
               className="w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
@@ -41,8 +69,8 @@ const RegisterPage = () => {
             <input
               type="password"
               placeholder="••••••••"
-              //value={password}
-              //onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
               className="w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
@@ -53,8 +81,8 @@ const RegisterPage = () => {
             <input
               type="password"
               placeholder="••••••••"
-              //value={password}
-              //onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
               className="w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />

@@ -17,3 +17,12 @@ def login_user(login_data: schemas.user.UserLogin, db: Session = Depends(get_db)
         "name": user.name,
         "email": user.email
     }
+
+@router.post("/register")
+def register_user(register_data: schemas.user.UserCreate, db: Session = Depends(get_db)):
+    user = crud.user.get_user_by_email(db, register_data.email)
+    print(user)
+    if user:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Email already registered to an account")
+    crud.user.create_user(db, register_data)
+    return "User registered successful"

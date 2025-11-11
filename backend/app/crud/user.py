@@ -13,11 +13,10 @@ from app.core.security import hash_password, verify_password
 def create_user(db: Session, user: UserCreate):
     """Creates a new user in the database."""
     # For now, store the raw password (not recommended for production)
-    hashed_password = user.password  
     db_user = User(
         name=user.name,
         email=user.email,
-        password_hash=hash_password(hashed_password)
+        password_hash=hash_password(user.password)
     )
     db.add(db_user)
     db.commit()
