@@ -7,25 +7,48 @@ const LoginPage = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
+  const [loading, setLoading] = useState(false)
   const router = useRouter()
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
+    setError(null)
+    setLoading(true)
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/auth/login', {
+      const response = await fetch('http://localhost:8000/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ email, password }),
+        credentials: 'include',
       })
 
       if (!response.ok) throw new Error('Invalid credentials')
 
       const data = await response.json()
+
+      // Save token
       localStorage.setItem('token', data.access_token)
-      router.push('/dashboard')
+      console.log("Token: " + data.access_token)
+
+      // Get user info immediately
+      const userRes = await fetch('http://localhost:8000/users/me', {
+        credentials: 'include',
+      })
+      console.log(userRes)
+      if (!userRes.ok) throw new Error('Failed to fetch user info')
+
+      const userData = await userRes.json()
+      localStorage.setItem('user', JSON.stringify(userData))
+
+      setTimeout(() => {
+        router.push('/dashboard')
+        //window.location.href = '/dashboard'
+      }, 200) 
     } catch (err: any) {
       setError(err.message || 'Login failed')
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -67,9 +90,14 @@ const LoginPage = () => {
 
           <button
             type="submit"
-            className="w-full py-2 mt-2 text-white font-semibold bg-blue-600 rounded-md hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all"
+            disabled={loading}
+            className={`w-full py-2 mt-2 text-white font-semibold rounded-md focus:ring-4 focus:ring-blue-300 transition-all ${
+              loading
+                ? 'bg-blue-400 cursor-not-allowed'
+                : 'bg-blue-600 hover:bg-blue-700'
+            }`}
           >
-            Sign In
+            {loading ? 'Signing In...' : 'Sign In'}
           </button>
         </form>
 

@@ -3,13 +3,6 @@ from app.models.user import User
 from app.schemas.user import UserCreate 
 from app.core.security import hash_password, verify_password
 
-# If you want password hashing later, uncomment and configure this:
-# from passlib.context import CryptContext
-# pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
-# def get_password_hash(password: str) -> str:
-#     return pwd_context.hash(password)
-
 def create_user(db: Session, user: UserCreate):
     """Creates a new user in the database."""
     # For now, store the raw password (not recommended for production)

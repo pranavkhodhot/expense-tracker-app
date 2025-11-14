@@ -2,9 +2,54 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.schemas import user as user_schema
 from app.crud import user as user_crud
+from app.crud import transaction as transaction_crud
+from app.crud import budget as budget_crud
+from app.models import user as user_model
 from app.database import get_db
+from app.core.dependencies import get_current_user
 
 router = APIRouter()
+
+@router.get("/me")
+def get_user_dashboard(
+    db: Session = Depends(get_db),
+    current_user: user_model = Depends(get_current_user)
+):
+    """
+    Returns the logged-in user's profile, budgets, and recent transactions.
+    """
+    budgets = budget_crud.get_budgets_for_user(db, user_id=current_user.user_id)
+    transactions = transaction_crud.get_transactions_for_user(db, user_id=current_user.user_id)
+
+    # Sort transactions by date, latest first (optional)
+    transactions = sorted(transactions, key=lambda t: t.transaction_date, reverse=True)
+
+    return {
+        "user": {
+            "user_id": current_user.user_id,
+            "name": current_user.name,
+            "email": current_user.email,
+        },
+        "budgets": [
+            {
+                "budget_id": b.budget_id,
+                "category_name": b.category.category_name if b.category else None,
+                "amount": float(b.amount),
+                "start_date": b.start_date,
+                "end_date": b.end_date,
+            } for b in budgets
+        ],
+        "transactions": [
+            {
+                "transaction_id": t.transaction_id,
+                "transaction_name": t.transaction_name,
+                "amount": float(t.amount),
+                "transaction_date": t.transaction_date,
+                "category_name": t.category.category_name if t.category else None,
+                "notes": t.notes,
+            } for t in transactions[:10]
+        ]
+    }
 
 @router.post("/", response_model=user_schema.UserOut)
 def create_user(user: user_schema.UserCreate, db: Session = Depends(get_db)):
