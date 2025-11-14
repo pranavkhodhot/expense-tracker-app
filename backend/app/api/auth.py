@@ -43,3 +43,9 @@ def register_user(register_data: schemas.user.UserCreate, db: Session = Depends(
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Email already registered to an account")
     crud.user.create_user(db, register_data)
     return "User registered successful"
+
+@router.post("/logout")
+def logout_user():
+    response = JSONResponse({"message": "Logged out successfully"})
+    response.delete_cookie(key="token")
+    return response
