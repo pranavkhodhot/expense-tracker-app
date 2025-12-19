@@ -1,2 +1,5 @@
 @import "tailwindcss";
 
+span {
+    color: red
+}

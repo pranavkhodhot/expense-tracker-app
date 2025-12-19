@@ -65,6 +65,16 @@ const Sidebar = () => {
             </li>
             <li>
               <Link
+                href="/budgets"
+                className="flex gap-2 py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+                onClick={isMobile ? toggleSidebar : undefined}
+              >
+                <Image src="/Budgets.svg" alt="Budgets" width={25} height={25}/>
+                Budgets
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/metadata"
                 className="flex gap-2 py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
                 onClick={isMobile ? toggleSidebar : undefined}
