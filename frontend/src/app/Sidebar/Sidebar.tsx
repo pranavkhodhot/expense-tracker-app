@@ -55,7 +55,7 @@ const Sidebar = () => {
           <ul className="space-y-2 text-lg">
             <li>
               <Link
-                href="/"
+                href="/dashboard"
                 className="flex gap-2 py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
                 onClick={isMobile ? toggleSidebar : undefined}
               >

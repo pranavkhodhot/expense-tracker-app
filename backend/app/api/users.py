@@ -35,8 +35,7 @@ def get_user_dashboard(
                 "budget_id": b.budget_id,
                 "category_name": b.category.category_name if b.category else None,
                 "amount": float(b.amount),
-                "start_date": b.start_date,
-                "end_date": b.end_date,
+                "amount_spent": budget_crud.get_total_spent_on_budget(db=db,budget_id=b.budget_id)
             } for b in budgets
         ],
         "transactions": [

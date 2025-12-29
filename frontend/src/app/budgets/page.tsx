@@ -3,6 +3,7 @@
 import React, { use, useEffect, useState, FormEvent } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import Modal from "../Modal/Modal";
+import BudgetCard from "../BudgetCard/BudgetCard";
 
 interface UserData {
   user: {
@@ -13,6 +14,7 @@ interface UserData {
   budgets: {
     category_name: string;
     amount: number;
+    amount_spent: number;
   }[];
   transactions: {
     transaction_id: number;
@@ -28,7 +30,7 @@ interface CategoryData {
   category_id: number;
 }
 
-const DashboardPage = () => {
+const BudgetPage = () => {
   const [data, setData] = useState<UserData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -118,26 +120,23 @@ const DashboardPage = () => {
     }
   };
 
-  const addTransaction = async (event: FormEvent<HTMLFormElement>) => {
+  const addBudget = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const transactionValues = {
+    const budgetValues = {
       user_id: data.user.user_id,
       category_id: categories?.find(
         (object) =>
-          object.category_name === formData.get("transaction-category")
+          object.category_name === formData.get("budget-category")
       )?.category_id,
-      transaction_name: formData.get("transaction-name"),
-      amount: formData.get("transaction-amount"),
-      transaction_date: formData.get("transaction-date"),
-      notes: formData.get("transaction-notes"),
+      amount: formData.get("budget-amount"),
     };
-    console.log(transactionValues);
+    console.log(budgetValues);
     try {
-      const response = await fetch("http://localhost:8000/transactions", {
+      const response = await fetch("http://localhost:8000/budgets", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(transactionValues),
+        body: JSON.stringify(budgetValues),
       });
       console.log(response);
     } catch (error) {
@@ -147,53 +146,44 @@ const DashboardPage = () => {
     setIsModalOpen(false);
   };
 
+  const budgetCategories = new Set<String>();
+  if (data.budgets){
+    for(let i=0;i<data.budgets.length;i++){
+      budgetCategories.add(data.budgets[i].category_name)
+    }
+  }
+  console.log(budgetCategories)
+  const filteredCategories = categories?.filter((category) => !budgetCategories.has(category.category_name))
+  console.log(filteredCategories)
+
+  
   return (
     <>
       <Sidebar />
       <div className="flex-1 sm:ml-64 p-6 bg-gray-100 min-h-screen transition-all duration-300">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold text-gray-800">
-            Welcome, {data.user.name.split(" ")[0]} 👋
-          </h1>
+          <h1 className="text-3xl font-bold text-gray-800">Your Budgets</h1>
           <div className="flex gap-5">
             <button
               onClick={openModal}
               className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out cursor-pointer"
             >
-              Add Transaction
-            </button>
-            <button
-              className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out cursor-pointer"
-              onClick={handleLogout}
-            >
-              Log Out
+              Add Budget
             </button>
           </div>
         </div>
         <Modal isOpen={isModalOpen} onClose={closeModal}>
           <h2 className="text-2xl font-semibold mb-6 text-center">
-            Add Transaction
+            Add Budget
           </h2>
-          <form onSubmit={addTransaction}>
+          <form onSubmit={addBudget}>
             <label htmlFor="">
-              Transaction Name <span className="required">*</span>
-            </label>
-            <br />
-            <input
-              type="text"
-              name="transaction-name"
-              id="transaction-name"
-              className="w-full px-4 py-2 my-2 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              required
-            />
-            <br />
-            <label htmlFor="">
-              Transaction Category <span className="required">*</span>
+              Budget Category <span className="required">*</span>
             </label>
             <br />
             <select
-              name="transaction-category"
-              id="transaction-category"
+              name="budget-category"
+              id="budget-category"
               className="w-full px-2 py-2 my-2 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
               defaultValue="Select your option"
               required
@@ -201,7 +191,8 @@ const DashboardPage = () => {
               <option value="Select your option" disabled>
                 Select your option
               </option>
-              {categories?.map((category) => (
+              {filteredCategories?.map((category) => (
+                
                 <option
                   key={category.category_id}
                   value={category.category_name}
@@ -212,44 +203,21 @@ const DashboardPage = () => {
             </select>
             <br />
             <label htmlFor="">
-              Transaction Amount <span className="required">*</span>
+              Budget Amount <span className="required">*</span>
             </label>
             <br />
             <input
               type="number"
-              name="transaction-amount"
-              id="transaction-amount"
+              name="budget-amount"
+              id="budget-amount"
               min="0"
               step=".01"
               className="w-full px-4 py-2 my-2 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
               required
             />
-            <br />
-            <label htmlFor="">
-              Transaction Date <span className="required">*</span>
-            </label>
-            <br />
-            <input
-              type="date"
-              name="transaction-date"
-              id="transaction-date"
-              className="px-4 py-2 border border-gray-300 rounded-md my-2"
-              max={formattedDate}
-              required
-            />
-            <br />
-            <label htmlFor="">Transaction Notes</label>
-            <br />
-            <input
-              type="textarea"
-              name="transaction-notes"
-              id="transaction-notes"
-              className="w-full pb-12 px-2 pt-2 my-2 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
-            <br />
             <div className="justify-self-center my-2">
               <button className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out cursor-pointer justify-center">
-                Add Transaction
+                Add Budget
               </button>
             </div>
           </form>
@@ -290,46 +258,14 @@ const DashboardPage = () => {
         {/* Transactions Table */}
         <div className="bg-white shadow rounded-lg p-6">
           <h2 className="text-lg font-semibold text-gray-700 mb-4">
-            Recent Transactions
+            Current Budgets
           </h2>
-          <div className="overflow-x-auto">
-            <table className="min-w-full table-auto">
-              <thead>
-                <tr className="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
-                  <th className="py-3 px-6 text-left">Name</th>
-                  <th className="py-3 px-6 text-left">Category</th>
-                  <th className="py-3 px-6 text-left">Amount</th>
-                  <th className="py-3 px-6 text-left">Date</th>
-                  <th className="py-3 px-6 text-left"></th>
-                </tr>
-              </thead>
-              <tbody className="text-gray-700 text-sm font-light">
-                {data.transactions.map((t) => (
-                  <tr
-                    key={t.transaction_id}
-                    className="border-b border-gray-200 hover:bg-gray-50"
-                  >
-                    <td className="py-3 px-6">{t.transaction_name}</td>
-                    <td className="py-3 px-6">{t.category_name}</td>
-                    <td className="py-3 px-6 font-semibold">${t.amount}</td>
-                    <td className="py-3 px-6">{t.transaction_date}</td>
-                    <td className="py-3 pl-6">
-                      <button
-                        onClick={openModal}
-                        className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out cursor-pointer"
-                      >
-                        <img
-                          src="Delete.svg"
-                          alt="Delete"
-                          width={20}
-                          height={20}
-                        />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="overflow-x-auto grid grid-cols-4 gap-4">
+            {data.budgets.map((b) => (
+              <div className="" key={b.category_name}>
+                <BudgetCard  category={b.category_name} amount={b.amount} amount_spent={b.amount_spent} ></BudgetCard>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -337,4 +273,4 @@ const DashboardPage = () => {
   );
 };
 
-export default DashboardPage;
+export default BudgetPage;

@@ -10,8 +10,7 @@ class Budget(Base):
     category_id = Column(Integer, ForeignKey("categories.category_id"))
     category = relationship("Category", back_populates="budgets")
     amount = Column(Integer, nullable=False)
-    start_date = Column(Date, nullable=False)
-    end_date = Column(Date, nullable=False)
+
 
     @property
     def category_name(self):
