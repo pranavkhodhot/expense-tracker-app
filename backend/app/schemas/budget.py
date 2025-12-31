@@ -11,10 +11,8 @@ class BudgetBase(BaseModel):
 class BudgetCreate(BudgetBase):
     user_id: int 
 
-class BudgetUpdate(BudgetBase):
-    category_id: Optional[int] = None
+class BudgetUpdate(BaseModel):
     amount: Optional[Decimal] = None
-
 
 class BudgetOut(BudgetBase):
     budget_id: int

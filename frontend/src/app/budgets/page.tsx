@@ -12,6 +12,7 @@ interface UserData {
     user_id: number;
   };
   budgets: {
+    budget_id: number;
     category_name: string;
     amount: number;
     amount_spent: number;
@@ -104,21 +105,6 @@ const BudgetPage = () => {
   if (!data) return <p>Loading dashboard...</p>;
   console.log(data);
   const totalExpenses = data.transactions.reduce((acc, t) => acc + t.amount, 0);
-
-  const handleLogout = async () => {
-    try {
-      await fetch("http://localhost:8000/auth/logout", {
-        method: "POST",
-        credentials: "include",
-      });
-
-      localStorage.removeItem("user");
-      localStorage.removeItem("token");
-      window.location.href = "/login";
-    } catch (err) {
-      console.error("Logout failed:", err);
-    }
-  };
 
   const addBudget = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -260,10 +246,10 @@ const BudgetPage = () => {
           <h2 className="text-lg font-semibold text-gray-700 mb-4">
             Current Budgets
           </h2>
-          <div className="overflow-x-auto grid grid-cols-4 gap-4">
+          <div className="overflow-x-auto grid grid-cols-4 md:grid-cols-3 sm:grid gap-4">
             {data.budgets.map((b) => (
               <div className="" key={b.category_name}>
-                <BudgetCard  category={b.category_name} amount={b.amount} amount_spent={b.amount_spent} ></BudgetCard>
+                <BudgetCard id={b.budget_id} category={b.category_name} amount={b.amount} amount_spent={b.amount_spent} update={fetchUserData}></BudgetCard>
               </div>
             ))}
           </div>
