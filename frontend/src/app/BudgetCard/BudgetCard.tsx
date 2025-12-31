@@ -47,7 +47,21 @@ const BudgetCard = ({ id, category, amount, amount_spent, update }: BudgetProps)
       setIsModalOpen(false);
     };
 
-  const handleDelete = () => {};
+  const handleDelete = async () => {
+    if (confirm(`Are you sure you want to delete your ${category} Budget`)){
+      try {
+        const response = await fetch(`http://localhost:8000/budgets/${id}`, {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+        });
+        console.log(response);
+      } catch (error) {
+        console.error(error);
+      }
+      await update();
+      setIsModalOpen(false);
+    };
+  }
 
   return (
     <>
