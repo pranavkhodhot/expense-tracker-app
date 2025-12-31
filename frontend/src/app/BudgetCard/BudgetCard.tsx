@@ -67,10 +67,13 @@ const BudgetCard = ({ id, category, amount, amount_spent, update }: BudgetProps)
     <>
       <div className="flex justify-between items-center bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 p-6 w-full max-w-2xl mx-auto relative">
         <div className="flex flex-col justify-between">
-          <h2 className="text-xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
+          <div className="flex">
+            <img src={`${category}.svg`} alt={category} className="w-10"/>
+          <h2 className="text-xl font-semibold text-gray-800 my-2 ps-2 flex items-center gap-2">
             {category}
           </h2>
-
+          </div>
+          
           <div className="mb-3">
             <p className="text-sm text-gray-500">Spent</p>
             <h3 className="text-lg font-bold text-gray-800">

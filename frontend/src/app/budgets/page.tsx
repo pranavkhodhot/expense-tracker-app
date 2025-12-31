@@ -4,6 +4,8 @@ import React, { use, useEffect, useState, FormEvent } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import Modal from "../Modal/Modal";
 import BudgetCard from "../BudgetCard/BudgetCard";
+import Linechart from "../Linechart/Linechart";
+
 
 interface UserData {
   user: {
@@ -212,11 +214,9 @@ const BudgetPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           <div className="bg-white shadow rounded-lg p-6">
             <h2 className="text-lg font-semibold text-gray-700 mb-2">
-              Total Expenses
+              Comparison Chart
             </h2>
-            <p className="text-2xl font-bold text-gray-900">
-              ${totalExpenses.toFixed(2)}
-            </p>
+            <Linechart budgets={data.budgets}/>
           </div>
 
           <div className="bg-white shadow rounded-lg p-6">
@@ -227,16 +227,12 @@ const BudgetPage = () => {
               {data.budgets.length}
             </p>
           </div>
-
           <div className="bg-white shadow rounded-lg p-6">
             <h2 className="text-lg font-semibold text-gray-700 mb-2">
-              Recent Categories
+              Active Budgets
             </h2>
             <p className="text-2xl font-bold text-gray-900">
-              {
-                [...new Set(data.transactions.map((t) => t.category_name))]
-                  .length
-              }
+              {data.budgets.length}
             </p>
           </div>
         </div>
