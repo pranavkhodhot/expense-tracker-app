@@ -5,6 +5,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import Modal from "../Modal/Modal";
 import BudgetCard from "../BudgetCard/BudgetCard";
 import Linechart from "../Linechart/Linechart";
+import Gauge from "../Gauge/Gauge";
 
 
 interface UserData {
@@ -211,7 +212,7 @@ const BudgetPage = () => {
           </form>
         </Modal>
         {/* Overview Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-2 mb-6">
           <div className="bg-white shadow rounded-lg p-6">
             <h2 className="text-lg font-semibold text-gray-700 mb-2">
               Comparison Chart
@@ -219,22 +220,7 @@ const BudgetPage = () => {
             <Linechart budgets={data.budgets}/>
           </div>
 
-          <div className="bg-white shadow rounded-lg p-6">
-            <h2 className="text-lg font-semibold text-gray-700 mb-2">
-              Active Budgets
-            </h2>
-            <p className="text-2xl font-bold text-gray-900">
-              {data.budgets.length}
-            </p>
-          </div>
-          <div className="bg-white shadow rounded-lg p-6">
-            <h2 className="text-lg font-semibold text-gray-700 mb-2">
-              Active Budgets
-            </h2>
-            <p className="text-2xl font-bold text-gray-900">
-              {data.budgets.length}
-            </p>
-          </div>
+          <Gauge budgets={data.budgets}></Gauge>            
         </div>
 
         {/* Transactions Table */}
