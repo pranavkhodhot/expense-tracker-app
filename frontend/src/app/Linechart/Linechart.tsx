@@ -44,7 +44,7 @@ const Linechart = ({budgets}: ChartProps) => {
         label: "Amount Spent",
         data: budgets.map((budget) => budget.amount_spent), 
         backgroundColor: "#01c621", 
-        borderColor: "rgba(54, 162, 235, 1)",
+        borderColor: "rgba(0, 0, 0, 1)",
         borderWidth: 1,
         borderRadius: 5
 
@@ -53,7 +53,7 @@ const Linechart = ({budgets}: ChartProps) => {
         label: "Budget Amount",
         data: budgets.map((budget) => budget.amount), 
         backgroundColor: "#348053", 
-        borderColor: "rgba(54, 162, 235, 1)",
+        borderColor: "rgba(0, 0, 0, 1)",
         borderWidth: 1,
         borderRadius: 5
       }
