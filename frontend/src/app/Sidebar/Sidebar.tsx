@@ -75,7 +75,7 @@ const Sidebar = () => {
             </li>
             <li>
               <Link
-                href="/metadata"
+                href="/expenses"
                 className="flex gap-2 py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
                 onClick={isMobile ? toggleSidebar : undefined}
               >

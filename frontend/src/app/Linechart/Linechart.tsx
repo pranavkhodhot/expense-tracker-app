@@ -1,88 +1,74 @@
-// components/MyBarChart.tsx
-"use client"; // Use client directive for Next.js App Router
-
+"use client";
 import React from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
-  BarElement,
+  PointElement,
+  LineElement,
   Title,
   Tooltip,
   Legend,
-  ChartData,
   ChartOptions,
+  ChartData,
 } from "chart.js";
-import { Bar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
-  BarElement,
+  PointElement,
+  LineElement,
   Title,
   Tooltip,
   Legend
 );
 
 interface ChartProps {
-  budgets: {
-    budget_id: number;
-    category_name: string;
+  transactions: {
+    transaction_id: number;
+    transaction_name: string;
     amount: number;
-    amount_spent: number;
+    transaction_date: Date | string;
+    category_name: string;
   }[];
 }
 
-const Linechart = ({budgets}: ChartProps) => {
-  const labels = budgets.map((budget) => budget.category_name)
-  console.log(labels)
-
-  const data: ChartData<"bar"> = {
-    labels,
-    datasets: [
-      {
-        label: "Amount Spent",
-        data: budgets.map((budget) => budget.amount_spent), 
-        backgroundColor: "#01c621", 
-        borderColor: "rgba(0, 0, 0, 1)",
-        borderWidth: 1,
-        borderRadius: 5
-
-      },
-      {
-        label: "Budget Amount",
-        data: budgets.map((budget) => budget.amount), 
-        backgroundColor: "#348053", 
-        borderColor: "rgba(0, 0, 0, 1)",
-        borderWidth: 1,
-        borderRadius: 5
-      }
-    ],
-    
-  };
-
-  const options: ChartOptions<"bar"> = {
+const Linechart = ({ transactions }: ChartProps) => {
+  const options: ChartOptions<"line"> = {
     responsive: true,
     plugins: {
       legend: {
-        position: "top" as const, 
+        position: "top" as const,
       },
       title: {
         display: true,
-        text: "Standard Bar Chart",
-      },
-    },
-    scales: {
-      x: {
-        stacked: true,
-      },
-      y: {
-        beginAtZero: true, 
+        text: "Chart.js Line Chart",
       },
     },
   };
 
-  return <Bar options={options} data={data} />;
+  transactions.sort((transactionA, transactionB) => {
+    const dateA = new Date(transactionA.transaction_date).getTime();
+    const dateB = new Date(transactionB.transaction_date).getTime();
+    return dateA - dateB;
+  });
+
+  const labels = transactions.map((transaction) => transaction.transaction_date);
+  const points = transactions.map((transaction) => transaction.amount);
+
+  const data: ChartData<"line"> = {
+    labels,
+    datasets: [
+      {
+        label: "Dataset 1",
+        data: points,
+        borderColor: "#01c621",
+        backgroundColor: "#348053",
+      },
+    ],
+  };
+  return <Line options={options} data={data} />;
 };
 
 export default Linechart;
