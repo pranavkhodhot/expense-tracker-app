@@ -24,6 +24,21 @@ const Sidebar = () => {
 
   const toggleSidebar = () => setIsOpen(!isOpen);
 
+  const handleLogout = async () => {
+      try {
+        await fetch("http://localhost:8000/auth/logout", {
+          method: "POST",
+          credentials: "include",
+        });
+  
+        localStorage.removeItem("user");
+        localStorage.removeItem("token");
+        window.location.href = "/login";
+      } catch (err) {
+        console.error("Logout failed:", err);
+      }
+    };
+
   return (
     <>
       {isMobile && (
@@ -92,6 +107,15 @@ const Sidebar = () => {
                 <Image src="/Settings.svg" alt="Settings" width={25} height={25}/>
                 Settings
               </Link>
+            </li>
+            <li>
+              <button
+                className="cursor-pointer w-full flex gap-2 py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+                onClick={handleLogout}
+              >
+                <Image src="/Logout.svg" alt="Logout" width={25} height={25}/>
+                Logout
+              </button>
             </li>
           </ul>
         </nav>

@@ -103,21 +103,6 @@ const DashboardPage = () => {
   console.log(data);
   const totalExpenses = data.transactions.reduce((acc, t) => acc + t.amount, 0);
 
-  const handleLogout = async () => {
-    try {
-      await fetch("http://localhost:8000/auth/logout", {
-        method: "POST",
-        credentials: "include",
-      });
-
-      localStorage.removeItem("user");
-      localStorage.removeItem("token");
-      window.location.href = "/login";
-    } catch (err) {
-      console.error("Logout failed:", err);
-    }
-  };
-
   const addTransaction = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -161,12 +146,6 @@ const DashboardPage = () => {
               className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out cursor-pointer"
             >
               Add Transaction
-            </button>
-            <button
-              className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out cursor-pointer"
-              onClick={handleLogout}
-            >
-              Log Out
             </button>
           </div>
         </div>
