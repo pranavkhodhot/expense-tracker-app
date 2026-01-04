@@ -31,14 +31,14 @@ const Piechart = ({ budgets }: ChartProps) => {
         label: "Amount Spent this Month",
         data: values,
         backgroundColor: [
-  "#004700", // Deep Forest
-  "#39FF14", // Neon Mint
-  "#50C878", // Classic Emerald
-  "#4A5D23", // Dark Sage/Olive
-  "#AFE1AF", // Pale Celadon
-  "#008080", // Vibrant Teal
-  "#76BA1B"  // Electric Lime
-],
+          "#004700",
+          "#39FF14",
+          "#50C878",
+          "#4A5D23",
+          "#AFE1AF",
+          "#008080",
+          "#76BA1B",
+        ],
         borderColor: [
           "#FFFFFF", // Use white borders for clear separation
           "#FFFFFF",

@@ -5,6 +5,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import Modal from "../Modal/Modal";
 import Piechart from "../Charts/Piechart";
 import Linechart from "../Charts/Linechart";
+import TransactionRow from "../TransactionRow/TransactionRow";
 
 interface UserData {
   user: {
@@ -271,9 +272,9 @@ const ExpensesPage = () => {
               Comparison Chart
             </h2>
             <div className="flex justify-center">
-                <div>
-                    <Piechart budgets={data.budgets}></Piechart>
-                </div>   
+              <div>
+                <Piechart budgets={data.budgets}></Piechart>
+              </div>
             </div>
           </div>
         </div>
@@ -294,30 +295,14 @@ const ExpensesPage = () => {
                   <th className="py-3 px-6 text-left"></th>
                 </tr>
               </thead>
-              <tbody className="text-gray-700 text-sm font-light">
+              <tbody className="text-gray-700 text-sm">
                 {data.transactions.map((t) => (
-                  <tr
+                  <TransactionRow
                     key={t.transaction_id}
-                    className="border-b border-gray-200 hover:bg-gray-50"
-                  >
-                    <td className="py-3 px-6">{t.transaction_name}</td>
-                    <td className="py-3 px-6">{t.category_name}</td>
-                    <td className="py-3 px-6 font-semibold">${t.amount}</td>
-                    <td className="py-3 px-6">{t.transaction_date}</td>
-                    <td className="py-3 pl-6">
-                      <button
-                        onClick={openModal}
-                        className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out cursor-pointer"
-                      >
-                        <img
-                          src="Edit.svg"
-                          alt="Edit"
-                          width={20}
-                          height={20}
-                        />
-                      </button>
-                    </td>
-                  </tr>
+                    transaction={t}
+                    update={fetchUserData}
+                    categories={categories || []}
+                  />
                 ))}
               </tbody>
             </table>
