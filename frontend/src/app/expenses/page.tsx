@@ -3,9 +3,8 @@
 import React, { use, useEffect, useState, FormEvent } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import Modal from "../Modal/Modal";
-import Barchart from "../Barchart/Barchart";
-import Gauge from "../Gauge/Gauge";
-import Linechart from "../Linechart/Linechart";
+import Piechart from "../Charts/Piechart";
+import Linechart from "../Charts/Linechart";
 
 interface UserData {
   user: {
@@ -265,10 +264,18 @@ const ExpensesPage = () => {
             <h2 className="text-lg font-semibold text-gray-700 mb-2">
               Comparison Chart
             </h2>
-            <Linechart transactions={data.transactions}/>
+            <Linechart transactions={data.transactions} />
           </div>
-
-          <Gauge budgets={data.budgets}></Gauge>
+          <div className="bg-white shadow rounded-lg p-6">
+            <h2 className="text-lg font-semibold text-gray-700 mb-2">
+              Comparison Chart
+            </h2>
+            <div className="flex justify-center">
+                <div>
+                    <Piechart budgets={data.budgets}></Piechart>
+                </div>   
+            </div>
+          </div>
         </div>
 
         {/* Transactions Table */}
@@ -303,8 +310,8 @@ const ExpensesPage = () => {
                         className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out cursor-pointer"
                       >
                         <img
-                          src="Delete.svg"
-                          alt="Delete"
+                          src="Edit.svg"
+                          alt="Edit"
                           width={20}
                           height={20}
                         />

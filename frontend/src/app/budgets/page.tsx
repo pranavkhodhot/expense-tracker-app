@@ -4,9 +4,9 @@ import React, { use, useEffect, useState, FormEvent } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import Modal from "../Modal/Modal";
 import BudgetCard from "../BudgetCard/BudgetCard";
-import Linechart from "../Barchart/Barchart";
-import Gauge from "../Gauge/Gauge";
-import Barchart from "../Barchart/Barchart";
+import Linechart from "../Charts/Barchart";
+import Gauge from "../Charts/Gauge";
+import Barchart from "../Charts/Barchart";
 
 interface UserData {
   user: {
