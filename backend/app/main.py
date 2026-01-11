@@ -4,6 +4,9 @@ from app.api import categories
 from app.api import budgets
 from app.api import transactions
 from app.api import auth
+from app.api import predict
+
+
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -29,6 +32,8 @@ app.include_router(categories.router, prefix="/categories", tags=["Categories"])
 app.include_router(budgets.router, prefix="/budgets", tags=["Budgets"])
 app.include_router(transactions.router, prefix="/transactions", tags=["Transactions"])
 app.include_router(auth.router)
+app.include_router(predict.router, prefix="/ml", tags=["Machine Learning"])
+
 
 
 
