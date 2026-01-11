@@ -1,0 +1,1554 @@
+transaction_name,category_name
+spectrum internet,Utilities
+water bill,Utilities
+albertsons,Groceries
+netflix,Entertainment
+lowe's home improvement,Housing
+pg&e electricity bill,Utilities
+panera bread,Dining Out
+fitness gym membership,Health
+ikea furniture,Housing
+texas roadhouse,Dining Out
+dental checkup,Health
+meijer,Groceries
+youtube premium,Entertainment
+aldi,Groceries
+kroger,Groceries
+walgreens,Health
+spotify,Entertainment
+mcdonald's,Dining Out
+shell gas station,Transportation
+property tax,Housing
+airbnb stay,Housing
+solarcity energy,Utilities
+parking garage,Transportation
+delta airlines,Transportation
+walmart supercenter,Groceries
+hulu,Entertainment
+uber eats delivery fee,Transportation
+comcast xfinity,Utilities
+chipotle,Dining Out
+waste management,Utilities
+apple music,Entertainment
+verizon wireless,Utilities
+subway,Dining Out
+electric company payment,Utilities
+disney+,Entertainment
+cvs pharmacy,Health
+vision express,Health
+bp gas,Transportation
+mortgage payment,Groceries
+ihop,Dining Out
+five guys,Dining Out
+urgent care visit,Health
+wayfair,Housing
+doctor appointment,Health
+domino's pizza,Dining Out
+xbox live subscription,Entertainment
+costco,Groceries
+american airlines,Transportation
+rent payment,Housing
+uber,Transportation
+at&t internet,Utilities
+physical therapy,Health
+bluecross insurance,Health
+amazon prime video,Entertainment
+playstation plus,Entertainment
+kaiser permanente,Dining Out
+whole foods,Groceries
+publix,Groceries
+metro transit,Transportation
+heating gas bill,Utilities
+starbucks coffee,Dining Out
+tesla supercharger,Transportation
+trader joe's,Groceries
+movie theater,Entertainment
+apartment maintenance,Housing
+kfc,Dining Out
+food lion,Groceries
+chevron,Transportation
+amc theaters,Entertainment
+home depot,Housing
+dunkin donuts,Dining Out
+chick-fil-a,Dining Out
+buffalo wild wings,Dining Out
+amtrak train,Transportation
+concert ticketmaster,Entertainment
+lyft,Transportation
+olive garden,Dining Out
+target grocery,Groceries
+nintendo eshop,Entertainment
+home insurance,Housing
+car wash express,Transportation
+taco bell,Dining Out
+la fitness,Health
+goodlife,Health
+movati,Health
+fit4less,Health
+planet fitness,Health
+restaurant,Dining Out
+gym,Health
+gym membership,Health
+breakfest,Dining Out
+lunch,Dining Out
+dinner,Dining Out
+go ,Transportation
+go transpo,Transportation
+ttc,Transportation
+enridge gas,Utilities
+gas,Utilities
+enridge,Utilities
+fitness,Health
+nobu,Dining Out
+sushi,Dining Out
+pizza,Dining Out
+pizza hut,Dining Out
+3 brothers,Dining Out
+daves hot chicken,Dining Out
+raising canes,Dining Out
+shake shack,Dining Out
+harris teeter,Groceries
+wegmans,Groceries
+h-e-b,Groceries
+fresh market,Groceries
+stop & shop,Groceries
+vons,Groceries
+ralphs,Groceries
+sprouts farmers market,Groceries
+food 4 less,Groceries
+sam's club,Groceries
+lidl,Groceries
+bjs wholesale,Groceries
+save-a-lot,Groceries
+grocery outlet,Groceries
+piggly wiggly,Groceries
+hy-vee,Groceries
+shoprite,Groceries
+hoa monthly fee,Groceries
+apartment deposit,Housing
+pest control service,Housing
+lawn care maintenance,Housing
+pool service,Housing
+storage unit rent,Housing
+realtor commission,Housing
+closing costs,Housing
+bed bath & beyond,Housing
+crate & barrel,Housing
+pottery barn,Housing
+williams sonoma,Housing
+west elm,Housing
+ashley furniture,Housing
+zillow payment,Housing
+electric bill payment,Housing
+gas & electric,Utilities
+water and sewer,Utilities
+trash collection fee,Utilities
+cell phone bill,Utilities
+t-mobile wireless,Utilities
+mint mobile,Utilities
+cricket wireless,Utilities
+solar panel lease,Utilities
+recycling service,Utilities
+dte energy,Utilities
+con edison,Utilities
+duke energy,Utilities
+southern california edison,Utilities
+directv,Utilities
+movie ticket purchase,Utilities
+live concert ticket,Entertainment
+eventbrite ticket,Entertainment
+steam games,Entertainment
+kindle ebook,Entertainment
+audible subscription,Entertainment
+casino trip,Entertainment
+bowling alley,Entertainment
+city zoo entry,Entertainment
+art museum,Entertainment
+paramount+,Entertainment
+peacock tv,Entertainment
+twitch subscription,Entertainment
+patreon support,Entertainment
+escape room,Entertainment
+gasoline purchase,Entertainment
+public transit fare,Transportation
+bus ticket,Transportation
+united airlines,Transportation
+southwest airlines,Transportation
+jetblue airways,Transportation
+car insurance premium,Transportation
+auto maintenance,Transportation
+jiffy lube oil change,Transportation
+tire rotation service,Transportation
+toll road fee,Transportation
+ez pass reload,Transportation
+enterprise rent-a-car,Transportation
+hertz car rental,Transportation
+zipcar,Transportation
+pharmacy prescription,Transportation
+general practitioner visit,Health
+hospital bill,Health
+eye exam and glasses,Health
+health insurance premium,Health
+vitamin shoppe,Health
+gnc supplements,Health
+massage therapy,Health
+chiropractic adjustment,Health
+mental health counseling,Health
+medical lab work,Health
+dental filling,Health
+dermatologist appointment,Health
+quest diagnostics,Health
+labcorp,Health
+burger king,Health
+wendy's,Dining Out
+cheesecake factory,Dining Out
+applebee's grill,Dining Out
+chili's grill & bar,Dining Out
+outback steakhouse,Dining Out
+denny's restaurant,Dining Out
+in-n-out burger,Dining Out
+jack in the box,Dining Out
+sonic drive-in,Dining Out
+popeyes louisiana kitchen,Dining Out
+tgi fridays,Dining Out
+cne,Dining Out
+museum,Entertainment
+aquarium,Entertainment
+ripleys,Entertainment
+six flags,Entertainment
+wonderland,Entertainment
+halloween haunt,Entertainment
+cineplex,Entertainment
+burger,Entertainment
+fries,Dining Out
+tacos,Dining Out
+shell,Dining Out
+petro,Transportation
+car gas,Transportation
+petro canada,Transportation
+giant food,Transportation
+hannaford,Groceries
+market basket,Groceries
+woodman's food market,Groceries
+bashas',Groceries
+smart & final,Groceries
+gelson's market,Groceries
+bristol farms,Groceries
+natural grocers,Groceries
+stew leonard's,Groceries
+roche bros.,Groceries
+raley's,Groceries
+stater bros. markets,Groceries
+winco foods,Groceries
+h-mart,Groceries
+99 ranch market,Groceries
+mitsuwa marketplace,Groceries
+patel brothers,Groceries
+local farmers market,Groceries
+instacart grocery,Groceries
+amazon fresh,Groceries
+thrive market,Groceries
+misfits market,Groceries
+hellofresh,Groceries
+blue apron,Groceries
+sunbasket,Groceries
+sherwin-williams,Groceries
+benjamin moore,Housing
+ace hardware,Housing
+true value,Housing
+harbor freight tools,Housing
+northern tool,Housing
+scotts lawn service,Housing
+terminix,Housing
+orkin pest control,Housing
+roto-rooter,Housing
+stanley steemer,Housing
+merry maids,Housing
+taskrabbit,Housing
+handyman connection,Housing
+ring subscription,Housing
+simplisafe,Housing
+adt security,Housing
+ethan allen,Housing
+la-z-boy,Housing
+cb2,Housing
+room & board,Housing
+sleep number,Housing
+casper sleep,Housing
+purple mattress,Housing
+lovesac,Housing
+wayfair professional,Housing
+overstock.com,Housing
+cox communications,Housing
+optimum online,Utilities
+suddenlink,Utilities
+mediacom,Utilities
+windstream,Utilities
+frontier communications,Utilities
+centurylink,Utilities
+us cellular,Utilities
+boost mobile,Utilities
+straight talk,Utilities
+national grid,Utilities
+eversource,Utilities
+exelon,Utilities
+entergy,Utilities
+xcel energy,Utilities
+republic services,Utilities
+waste management inc,Utilities
+rumpke waste,Utilities
+american water,Utilities
+cal water,Utilities
+liberty utilities,Utilities
+sparklight,Utilities
+viasat internet,Utilities
+starlink,Utilities
+hughesnet,Utilities
+vonage,Utilities
+hbo max,Utilities
+discovery+,Entertainment
+britbox,Entertainment
+curiositystream,Entertainment
+crunchyroll,Entertainment
+shudder,Entertainment
+gamestop,Entertainment
+epic games store,Entertainment
+gog.com,Entertainment
+humble bundle,Entertainment
+stubhub,Entertainment
+seatgeek,Entertainment
+cedar fair,Entertainment
+seaworld,Entertainment
+topgolf,Entertainment
+main event,Entertainment
+dave & buster's,Entertainment
+barnes & noble,Entertainment
+books-a-million,Entertainment
+kindle unlimited,Entertainment
+vudu,Entertainment
+roku channel,Entertainment
+sling tv,Entertainment
+fubotv,Entertainment
+youtube tv,Entertainment
+masterclass,Entertainment
+alaska airlines,Entertainment
+spirit airlines,Transportation
+frontier airlines,Transportation
+greyhound lines,Transportation
+megabus,Transportation
+via ride,Transportation
+revel moped,Transportation
+lime scooter,Transportation
+bird scooter,Transportation
+spin scooter,Transportation
+chargepoint,Transportation
+evgo,Transportation
+electrify america,Transportation
+autozone,Transportation
+o'reilly auto parts,Transportation
+advance auto parts,Transportation
+pep boys,Transportation
+midas,Transportation
+meineke car care,Transportation
+valvoline instant oil change,Transportation
+discount tire,Transportation
+firestone complete auto care,Transportation
+thrifty car rental,Transportation
+dollar rent a car,Transportation
+budget rent a car,Transportation
+parking.com,Transportation
+spothero,Transportation
+rite aid,Transportation
+kinney drugs,Health
+bartell drugs,Health
+fred meyer pharmacy,Health
+blue shield of california,Health
+aetna health,Health
+cigna health,Health
+unitedhealthcare,Health
+humana insurance,Health
+mayo clinic,Health
+cleveland clinic,Health
+soulcycle,Health
+orangetheory fitness,Health
+pure barre,Health
+corepower yoga,Health
+myfitnesspal premium,Health
+headspace,Health
+calm app,Health
+noom,Health
+weight watchers,Health
+peloton subscription,Health
+mirror fitness,Health
+whoop,Health
+oura ring,Health
+garmin connect,Health
+fitbit premium,Health
+whataburger,Health
+culver's,Dining Out
+zaxby's,Dining Out
+raising cane's,Dining Out
+wingstop,Dining Out
+bonefish grill,Dining Out
+longhorn steakhouse,Dining Out
+cracker barrel,Dining Out
+bob evans,Dining Out
+waffle house,Dining Out
+golden corral,Dining Out
+the halal guys,Dining Out
+jersey mike's subs,Dining Out
+firehouse subs,Dining Out
+jimmy john's,Dining Out
+potbelly sandwich shop,Dining Out
+jason's deli,Dining Out
+mcalister's deli,Dining Out
+crumbl cookies,Dining Out
+insomnia cookies,Dining Out
+dutch bros coffee,Dining Out
+peet's coffee,Dining Out
+caribou coffee,Dining Out
+sobeys,Groceries
+sobeys bill,Groceries
+metro inc,Groceries
+metro inc svcs,Groceries
+loblaws,Groceries
+loblaws store,Groceries
+no frills,Groceries
+no frills direct debit,Groceries
+waitrose,Groceries
+waitrose #8832,Groceries
+tesco express,Groceries
+tesco express ltd,Groceries
+sainsbury's local,Groceries
+sainsbury's local ltd,Groceries
+marks & spencer food,Groceries
+marks & spencer food bill,Groceries
+asda superstore,Groceries
+asda superstore store,Groceries
+morrisons,Groceries
+morrisons #8832,Groceries
+coles supermarkets,Groceries
+coles supermarkets #8832,Groceries
+woolworths group,Groceries
+woolworths group #8832,Groceries
+iga plus,Groceries
+iga plus ltd,Groceries
+foodland,Groceries
+foodland bill,Groceries
+longos,Groceries
+longos bill,Groceries
+farm boy,Groceries
+farm boy #8832,Groceries
+freshco,Groceries
+freshco direct debit,Groceries
+zehrs,Groceries
+zehrs ltd,Groceries
+real canadian superstore,Groceries
+real canadian superstore bill,Groceries
+fortinos,Groceries
+fortinos ltd,Groceries
+valu-mart,Groceries
+valu-mart payment,Groceries
+independent city market,Groceries
+independent city market store,Groceries
+extra foods,Groceries
+extra foods store,Groceries
+t&t supermarket,Groceries
+t&t supermarket bill,Groceries
+galleria supermarket,Groceries
+galleria supermarket payment,Groceries
+p.a.t. mart,Groceries
+p.a.t. mart payment,Groceries
+seafood city,Groceries
+seafood city ltd,Groceries
+island pacific,Groceries
+island pacific #8832,Groceries
+nijiya market,Groceries
+nijiya market payment,Groceries
+marukai market,Groceries
+marukai market direct debit,Groceries
+vallarta supermarkets,Groceries
+vallarta supermarkets bill,Groceries
+northgate market,Groceries
+northgate market bill,Groceries
+cardenas markets,Groceries
+cardenas markets bill,Groceries
+superior grocers,Groceries
+superior grocers bill,Groceries
+el super,Groceries
+el super ltd,Groceries
+festa is my market,Groceries
+festa is my market payment,Groceries
+western beef,Groceries
+western beef svcs,Groceries
+key food,Groceries
+key food ltd,Groceries
+c-town,Groceries
+c-town store,Groceries
+bravo supermarkets,Groceries
+bravo supermarkets ltd,Groceries
+fine fare,Groceries
+fine fare svcs,Groceries
+gristedes,Groceries
+gristedes #8832,Groceries
+d'agostino,Groceries
+d'agostino #8832,Groceries
+morton williams,Groceries
+morton williams bill,Groceries
+fairway market,Groceries
+fairway market svcs,Groceries
+zabar's,Groceries
+zabar's #8832,Groceries
+citarella,Groceries
+citarella ltd,Groceries
+erewhon market,Groceries
+erewhon market ltd,Groceries
+lassen's natural food,Groceries
+lassen's natural food store,Groceries
+mollie stone's,Groceries
+mollie stone's #8832,Groceries
+nugget markets,Groceries
+nugget markets #8832,Groceries
+oliver's market,Groceries
+oliver's market store,Groceries
+berkeley bowl,Groceries
+berkeley bowl ltd,Groceries
+rainbow grocery,Groceries
+rainbow grocery store,Groceries
+central market,Groceries
+central market payment,Groceries
+market street,Groceries
+market street bill,Groceries
+brookshire's,Groceries
+brookshire's svcs,Groceries
+united supermarkets,Groceries
+united supermarkets direct debit,Groceries
+win dixie,Groceries
+win dixie store,Groceries
+bi-lo,Groceries
+bi-lo #8832,Groceries
+harveys supermarket,Groceries
+harveys supermarket payment,Groceries
+food city,Groceries
+food city ltd,Groceries
+k-va-t food stores,Groceries
+k-va-t food stores bill,Groceries
+ingles markets,Groceries
+ingles markets store,Groceries
+weis markets,Groceries
+weis markets direct debit,Groceries
+giant eagle,Groceries
+giant eagle direct debit,Groceries
+price chopper,Groceries
+price chopper direct debit,Groceries
+tops friendly markets,Groceries
+tops friendly markets store,Groceries
+shaws,Groceries
+shaws bill,Groceries
+star market,Groceries
+star market bill,Groceries
+acme markets,Groceries
+acme markets ltd,Groceries
+jewel-osco,Groceries
+jewel-osco svcs,Groceries
+tom thumb,Groceries
+tom thumb store,Groceries
+randalls,Groceries
+randalls store,Groceries
+pavilions,Groceries
+pavilions ltd,Groceries
+united pacific,Groceries
+united pacific #8832,Groceries
+holiday stationstores,Groceries
+holiday stationstores svcs,Groceries
+kum & go,Groceries
+kum & go store,Groceries
+casey's general store,Groceries
+casey's general store bill,Groceries
+sheetz,Groceries
+sheetz ltd,Groceries
+wawa,Groceries
+wawa direct debit,Groceries
+quiktrip,Groceries
+quiktrip direct debit,Groceries
+love's travel stops,Groceries
+love's travel stops store,Groceries
+pilot flying j,Groceries
+pilot flying j bill,Groceries
+speedway,Groceries
+speedway svcs,Groceries
+maverik,Groceries
+maverik ltd,Groceries
+rutter's,Groceries
+rutter's direct debit,Groceries
+parker's,Groceries
+parker's payment,Groceries
+enmarket,Groceries
+enmarket svcs,Groceries
+gate petroleum,Groceries
+gate petroleum store,Groceries
+stewart's shops,Groceries
+stewart's shops #8832,Groceries
+cumberland farms,Groceries
+cumberland farms ltd,Groceries
+turkey hill,Groceries
+turkey hill ltd,Groceries
+thortons,Groceries
+thortons direct debit,Groceries
+kwik trip,Groceries
+kwik trip bill,Groceries
+hy-vee fast & fresh,Groceries
+hy-vee fast & fresh payment,Groceries
+amazon go,Groceries
+amazon go #8832,Groceries
+dashmart,Groceries
+dashmart payment,Groceries
+gopuff grocery,Groceries
+gopuff grocery direct debit,Groceries
+getir,Groceries
+getir ltd,Groceries
+gorillas,Groceries
+gorillas direct debit,Groceries
+flink,Groceries
+flink store,Groceries
+mortgage auto pay,Groceries
+mortgage auto pay direct debit,Housing
+monthly rent payment,Housing
+monthly rent payment store,Housing
+property tax installment,Housing
+property tax installment #8832,Housing
+condo association fee,Housing
+condo association fee bill,Housing
+hoa dues,Housing
+hoa dues bill,Housing
+renters insurance premium,Housing
+renters insurance premium bill,Housing
+homeowners insurance,Housing
+homeowners insurance #8832,Housing
+vivint smart home,Housing
+vivint smart home ltd,Housing
+brinks home security,Housing
+brinks home security ltd,Housing
+frontpoint security,Housing
+frontpoint security direct debit,Housing
+nest aware subscription,Housing
+nest aware subscription store,Housing
+arlo subscription,Housing
+arlo subscription direct debit,Housing
+trugreen lawn care,Housing
+trugreen lawn care #8832,Housing
+lawn doctor,Housing
+lawn doctor bill,Housing
+trugreen chemlawn,Housing
+trugreen chemlawn bill,Housing
+weed man,Housing
+weed man payment,Housing
+mosquito joe,Housing
+mosquito joe direct debit,Housing
+the gutter boys,Housing
+the gutter boys payment,Housing
+leaffilter gutter protection,Housing
+leaffilter gutter protection ltd,Housing
+thompson's waterseal,Housing
+thompson's waterseal ltd,Housing
+benjamin moore paint store,Housing
+benjamin moore paint store store,Housing
+ppg paints,Housing
+ppg paints direct debit,Housing
+kelly-moore paints,Housing
+kelly-moore paints store,Housing
+dunn-edwards paints,Housing
+dunn-edwards paints store,Housing
+sherwin-williams floorcovering,Housing
+sherwin-williams floorcovering bill,Housing
+floor & decor,Housing
+floor & decor #8832,Housing
+lumber liquidators,Housing
+lumber liquidators #8832,Housing
+ll flooring,Housing
+ll flooring store,Housing
+cabinets to go,Housing
+cabinets to go payment,Housing
+ferguson plumbing,Housing
+ferguson plumbing bill,Housing
+ferguson waterworks,Housing
+ferguson waterworks store,Housing
+rheem manufacturing,Housing
+rheem manufacturing ltd,Housing
+carrier hvac,Housing
+carrier hvac bill,Housing
+trane residential,Housing
+trane residential store,Housing
+lennox industries,Housing
+lennox industries ltd,Housing
+goodman manufacturing,Housing
+goodman manufacturing #8832,Housing
+mr. rooter plumbing,Housing
+mr. rooter plumbing direct debit,Housing
+benjamin franklin plumbing,Housing
+benjamin franklin plumbing ltd,Housing
+roto-rooter drain service,Housing
+roto-rooter drain service ltd,Housing
+rescue rooter,Housing
+rescue rooter svcs,Housing
+american residential services,Housing
+american residential services svcs,Housing
+comfort systems usa,Housing
+comfort systems usa payment,Housing
+molly maid,Housing
+molly maid direct debit,Housing
+the maids,Housing
+the maids store,Housing
+cottagecare,Housing
+cottagecare ltd,Housing
+maidpro,Housing
+maidpro svcs,Housing
+maid brigade,Housing
+maid brigade bill,Housing
+two men and a truck,Housing
+two men and a truck svcs,Housing
+u-haul international,Housing
+u-haul international #8832,Housing
+budget truck rental,Housing
+budget truck rental svcs,Housing
+penske truck rental,Housing
+penske truck rental #8832,Housing
+pods moving & storage,Housing
+pods moving & storage svcs,Housing
+public storage,Housing
+public storage payment,Housing
+extra space storage,Housing
+extra space storage ltd,Housing
+cubesmart,Housing
+cubesmart ltd,Housing
+life storage,Housing
+life storage #8832,Housing
+iron mountain,Housing
+iron mountain svcs,Housing
+clutter storage,Housing
+clutter storage direct debit,Housing
+makespace,Housing
+makespace #8832,Housing
+neighbor.com,Housing
+neighbor.com #8832,Housing
+apartments.com,Housing
+apartments.com svcs,Housing
+rent.com,Housing
+rent.com ltd,Housing
+zillow group,Housing
+zillow group svcs,Housing
+redfin corporation,Housing
+redfin corporation #8832,Housing
+compass inc,Housing
+compass inc direct debit,Housing
+realogy,Housing
+realogy svcs,Housing
+re/max,Housing
+re/max direct debit,Housing
+keller williams,Housing
+keller williams svcs,Housing
+century 21,Housing
+century 21 store,Housing
+coldwell banker,Housing
+coldwell banker bill,Housing
+berkshire hathaway homeservices,Housing
+berkshire hathaway homeservices svcs,Housing
+sotheby's international realty,Housing
+sotheby's international realty ltd,Housing
+better homes and gardens real estate,Housing
+better homes and gardens real estate ltd,Housing
+era real estate,Housing
+era real estate #8832,Housing
+corcoran group,Housing
+corcoran group store,Housing
+douglas elliman,Housing
+douglas elliman bill,Housing
+houlihan lawrence,Housing
+houlihan lawrence ltd,Housing
+william raveis,Housing
+william raveis #8832,Housing
+allen tate,Housing
+allen tate #8832,Housing
+long & foster,Housing
+long & foster bill,Housing
+howard hanna,Housing
+howard hanna ltd,Housing
+intero real estate,Housing
+intero real estate ltd,Housing
+pacific union,Housing
+pacific union payment,Housing
+first team real estate,Housing
+first team real estate ltd,Housing
+john l. scott,Housing
+john l. scott bill,Housing
+windermere real estate,Housing
+windermere real estate direct debit,Housing
+waste pro,Housing
+waste pro direct debit,Utilities
+waste connections,Utilities
+waste connections bill,Utilities
+casella waste systems,Utilities
+casella waste systems bill,Utilities
+advanced disposal,Utilities
+advanced disposal bill,Utilities
+recology,Utilities
+recology ltd,Utilities
+athens services,Utilities
+athens services svcs,Utilities
+harrison industries,Utilities
+harrison industries ltd,Utilities
+burrtec waste,Utilities
+burrtec waste bill,Utilities
+e.j. harrison & sons,Utilities
+e.j. harrison & sons direct debit,Utilities
+pacific gas & electric,Utilities
+pacific gas & electric #8832,Utilities
+southern california gas company,Utilities
+southern california gas company ltd,Utilities
+san diego gas & electric,Utilities
+san diego gas & electric store,Utilities
+consolidated edison,Utilities
+consolidated edison payment,Utilities
+public service enterprise group,Utilities
+public service enterprise group direct debit,Utilities
+pseg long island,Utilities
+pseg long island store,Utilities
+national grid us,Utilities
+national grid us bill,Utilities
+exelon corp,Utilities
+exelon corp bill,Utilities
+commonwealth edison,Utilities
+commonwealth edison direct debit,Utilities
+peco energy,Utilities
+peco energy ltd,Utilities
+baltimore gas and electric,Utilities
+baltimore gas and electric payment,Utilities
+delmarva power,Utilities
+delmarva power ltd,Utilities
+atlantic city electric,Utilities
+atlantic city electric direct debit,Utilities
+potomac electric power company,Utilities
+potomac electric power company direct debit,Utilities
+dominion energy,Utilities
+dominion energy svcs,Utilities
+duke energy carolinas,Utilities
+duke energy carolinas svcs,Utilities
+duke energy progress,Utilities
+duke energy progress #8832,Utilities
+duke energy florida,Utilities
+duke energy florida #8832,Utilities
+duke energy indiana,Utilities
+duke energy indiana store,Utilities
+duke energy ohio,Utilities
+duke energy ohio svcs,Utilities
+duke energy kentucky,Utilities
+duke energy kentucky bill,Utilities
+southern company,Utilities
+southern company ltd,Utilities
+georgia power,Utilities
+georgia power bill,Utilities
+alabama power,Utilities
+alabama power #8832,Utilities
+mississippi power,Utilities
+mississippi power ltd,Utilities
+gulf power,Utilities
+gulf power #8832,Utilities
+nextera energy,Utilities
+nextera energy direct debit,Utilities
+florida power & light,Utilities
+florida power & light direct debit,Utilities
+american electric power,Utilities
+american electric power payment,Utilities
+appalachian power,Utilities
+appalachian power direct debit,Utilities
+indiana michigan power,Utilities
+indiana michigan power direct debit,Utilities
+kentucky power,Utilities
+kentucky power #8832,Utilities
+ohio power,Utilities
+ohio power bill,Utilities
+public service company of oklahoma,Utilities
+public service company of oklahoma direct debit,Utilities
+southwestern electric power,Utilities
+southwestern electric power #8832,Utilities
+texas central company,Utilities
+texas central company bill,Utilities
+entergy arkansas,Utilities
+entergy arkansas ltd,Utilities
+entergy louisiana,Utilities
+entergy louisiana ltd,Utilities
+entergy mississippi,Utilities
+entergy mississippi direct debit,Utilities
+entergy new orleans,Utilities
+entergy new orleans direct debit,Utilities
+entergy texas,Utilities
+entergy texas direct debit,Utilities
+firstenergy,Utilities
+firstenergy store,Utilities
+ohio edison,Utilities
+ohio edison bill,Utilities
+the illuminating company,Utilities
+the illuminating company #8832,Utilities
+toledo edison,Utilities
+toledo edison direct debit,Utilities
+met-ed,Utilities
+met-ed direct debit,Utilities
+penelec,Utilities
+penelec bill,Utilities
+penn power,Utilities
+penn power #8832,Utilities
+west penn power,Utilities
+west penn power direct debit,Utilities
+jersey central power & light,Utilities
+jersey central power & light direct debit,Utilities
+mon power,Utilities
+mon power payment,Utilities
+potomac edison,Utilities
+potomac edison #8832,Utilities
+ppl electric utilities,Utilities
+ppl electric utilities #8832,Utilities
+centerpoint energy,Utilities
+centerpoint energy #8832,Utilities
+oncor electric delivery,Utilities
+oncor electric delivery #8832,Utilities
+aep texas,Utilities
+aep texas svcs,Utilities
+centerpoint houston electric,Utilities
+centerpoint houston electric svcs,Utilities
+texas-new mexico power,Utilities
+texas-new mexico power bill,Utilities
+atmos energy,Utilities
+atmos energy ltd,Utilities
+spire inc,Utilities
+spire inc store,Utilities
+nisource,Utilities
+nisource svcs,Utilities
+columbia gas,Utilities
+columbia gas payment,Utilities
+nipsco,Utilities
+nipsco svcs,Utilities
+southwest gas,Utilities
+southwest gas bill,Utilities
+one gas,Utilities
+one gas direct debit,Utilities
+new jersey resources,Utilities
+new jersey resources svcs,Utilities
+south jersey industries,Utilities
+south jersey industries #8832,Utilities
+chesapeake utilities,Utilities
+chesapeake utilities svcs,Utilities
+unitil,Utilities
+unitil payment,Utilities
+avangrid,Utilities
+avangrid payment,Utilities
+nyseg,Utilities
+nyseg ltd,Utilities
+rg&e,Utilities
+rg&e bill,Utilities
+central maine power,Utilities
+central maine power ltd,Utilities
+united illuminating,Utilities
+united illuminating svcs,Utilities
+berkshire gas,Utilities
+berkshire gas payment,Utilities
+connecticut natural gas,Utilities
+connecticut natural gas svcs,Utilities
+southern connecticut gas,Utilities
+southern connecticut gas bill,Utilities
+eversource energy,Utilities
+eversource energy bill,Utilities
+nstar electric,Utilities
+nstar electric direct debit,Utilities
+nstar gas,Utilities
+nstar gas bill,Utilities
+wmeco,Utilities
+wmeco store,Utilities
+psnh,Utilities
+psnh bill,Utilities
+criterion channel,Utilities
+criterion channel svcs,Entertainment
+mubi subscription,Entertainment
+mubi subscription store,Entertainment
+kanopy,Entertainment
+kanopy direct debit,Entertainment
+hoopla,Entertainment
+hoopla #8832,Entertainment
+vimeo on demand,Entertainment
+vimeo on demand payment,Entertainment
+bfi player,Entertainment
+bfi player ltd,Entertainment
+rakuten tv,Entertainment
+rakuten tv store,Entertainment
+magellantv,Entertainment
+magellantv #8832,Entertainment
+history vault,Entertainment
+history vault bill,Entertainment
+a&e crime central,Entertainment
+a&e crime central store,Entertainment
+lifetime movie club,Entertainment
+lifetime movie club #8832,Entertainment
+hallmark movies now,Entertainment
+hallmark movies now bill,Entertainment
+up faith & family,Entertainment
+up faith & family svcs,Entertainment
+pure flix,Entertainment
+pure flix svcs,Entertainment
+vidangel,Entertainment
+vidangel store,Entertainment
+angel studios,Entertainment
+angel studios #8832,Entertainment
+dailywire+,Entertainment
+dailywire+ payment,Entertainment
+tidal music,Entertainment
+tidal music svcs,Entertainment
+deezer,Entertainment
+deezer direct debit,Entertainment
+qobuz,Entertainment
+qobuz direct debit,Entertainment
+soundcloud go,Entertainment
+soundcloud go bill,Entertainment
+bandcamp,Entertainment
+bandcamp payment,Entertainment
+mixcloud,Entertainment
+mixcloud bill,Entertainment
+pandora plus,Entertainment
+pandora plus #8832,Entertainment
+iheartradio all access,Entertainment
+iheartradio all access #8832,Entertainment
+siriusxm radio,Entertainment
+siriusxm radio payment,Entertainment
+tunein radio,Entertainment
+tunein radio direct debit,Entertainment
+amazon music unlimited,Entertainment
+amazon music unlimited ltd,Entertainment
+napster,Entertainment
+napster payment,Entertainment
+wolfgang's vault,Entertainment
+wolfgang's vault bill,Entertainment
+playstation plus premium,Entertainment
+playstation plus premium direct debit,Entertainment
+xbox game pass ultimate,Entertainment
+xbox game pass ultimate bill,Entertainment
+nintendo switch online,Entertainment
+nintendo switch online svcs,Entertainment
+ea play,Entertainment
+ea play svcs,Entertainment
+ubisoft+,Entertainment
+ubisoft+ payment,Entertainment
+rockstar games social club,Entertainment
+rockstar games social club bill,Entertainment
+battle.net,Entertainment
+battle.net store,Entertainment
+origin access,Entertainment
+origin access #8832,Entertainment
+steam wallet,Entertainment
+steam wallet payment,Entertainment
+itch.io,Entertainment
+itch.io ltd,Entertainment
+g2a.com,Entertainment
+g2a.com direct debit,Entertainment
+cdkeys,Entertainment
+cdkeys direct debit,Entertainment
+green man gaming,Entertainment
+green man gaming payment,Entertainment
+fanatical,Entertainment
+fanatical ltd,Entertainment
+direct2drive,Entertainment
+direct2drive store,Entertainment
+gamersgate,Entertainment
+gamersgate payment,Entertainment
+gamefly,Entertainment
+gamefly payment,Entertainment
+gamestop pre-order,Entertainment
+gamestop pre-order bill,Entertainment
+amiami,Entertainment
+amiami store,Entertainment
+hobby link japan,Entertainment
+hobby link japan svcs,Entertainment
+right stuf anime,Entertainment
+right stuf anime bill,Entertainment
+sentai filmworks,Entertainment
+sentai filmworks ltd,Entertainment
+viz media,Entertainment
+viz media payment,Entertainment
+kodansha,Entertainment
+kodansha ltd,Entertainment
+yen press,Entertainment
+yen press svcs,Entertainment
+seven seas,Entertainment
+seven seas bill,Entertainment
+j-novel club,Entertainment
+j-novel club payment,Entertainment
+bookwalker,Entertainment
+bookwalker store,Entertainment
+comixology,Entertainment
+comixology store,Entertainment
+dc universe infinite,Entertainment
+dc universe infinite ltd,Entertainment
+marvel unlimited,Entertainment
+marvel unlimited ltd,Entertainment
+shonen jump,Entertainment
+shonen jump #8832,Entertainment
+webtoon,Entertainment
+webtoon direct debit,Entertainment
+tapas,Entertainment
+tapas direct debit,Entertainment
+lezhin,Entertainment
+lezhin svcs,Entertainment
+tappytoon,Entertainment
+tappytoon svcs,Entertainment
+pocket comics,Entertainment
+pocket comics direct debit,Entertainment
+manta comics,Entertainment
+manta comics store,Entertainment
+radish fiction,Entertainment
+radish fiction svcs,Entertainment
+wattpad premium,Entertainment
+wattpad premium svcs,Entertainment
+inkitt,Entertainment
+inkitt payment,Entertainment
+scribd,Entertainment
+scribd bill,Entertainment
+perlego,Entertainment
+perlego bill,Entertainment
+everand,Entertainment
+everand ltd,Entertainment
+libby app,Entertainment
+libby app bill,Entertainment
+overdrive,Entertainment
+overdrive ltd,Entertainment
+chirp audiobooks,Entertainment
+chirp audiobooks #8832,Entertainment
+libro.fm,Entertainment
+libro.fm direct debit,Entertainment
+downpour.com,Entertainment
+downpour.com payment,Entertainment
+graphicaudio,Entertainment
+graphicaudio direct debit,Entertainment
+podbean,Entertainment
+podbean store,Entertainment
+castbox,Entertainment
+castbox payment,Entertainment
+pocket casts,Entertainment
+pocket casts ltd,Entertainment
+overcast,Entertainment
+overcast #8832,Entertainment
+stitcher premium,Entertainment
+stitcher premium bill,Entertainment
+luminary,Entertainment
+luminary bill,Entertainment
+pushkin industries,Entertainment
+pushkin industries bill,Entertainment
+wondery+,Entertainment
+wondery+ store,Entertainment
+slate plus,Entertainment
+slate plus bill,Entertainment
+the athletic subscription,Entertainment
+the athletic subscription direct debit,Entertainment
+nyt games,Entertainment
+nyt games bill,Entertainment
+washington post,Entertainment
+washington post svcs,Entertainment
+wall street journal,Entertainment
+wall street journal bill,Entertainment
+financial times,Entertainment
+financial times svcs,Entertainment
+the economist,Entertainment
+the economist ltd,Entertainment
+the new yorker,Entertainment
+the new yorker store,Entertainment
+atlantic magazine,Entertainment
+atlantic magazine payment,Entertainment
+lufthansa airlines,Entertainment
+lufthansa airlines direct debit,Transportation
+british airways,Transportation
+british airways direct debit,Transportation
+air france,Transportation
+air france #8832,Transportation
+klm royal dutch,Transportation
+klm royal dutch bill,Transportation
+iberia,Transportation
+iberia #8832,Transportation
+alitalia,Transportation
+alitalia #8832,Transportation
+swiss international,Transportation
+swiss international ltd,Transportation
+austrian airlines,Transportation
+austrian airlines payment,Transportation
+brussels airlines,Transportation
+brussels airlines direct debit,Transportation
+finnair,Transportation
+finnair svcs,Transportation
+tap air portugal,Transportation
+tap air portugal payment,Transportation
+sas scandinavian,Transportation
+sas scandinavian payment,Transportation
+norwegian air,Transportation
+norwegian air payment,Transportation
+ryanair,Transportation
+ryanair #8832,Transportation
+easyjet,Transportation
+easyjet #8832,Transportation
+wizz air,Transportation
+wizz air store,Transportation
+vueling,Transportation
+vueling ltd,Transportation
+eurowings,Transportation
+eurowings payment,Transportation
+condor airlines,Transportation
+condor airlines payment,Transportation
+tui fly,Transportation
+tui fly #8832,Transportation
+emirates,Transportation
+emirates ltd,Transportation
+qatar airways,Transportation
+qatar airways svcs,Transportation
+etihad airways,Transportation
+etihad airways payment,Transportation
+turkish airlines,Transportation
+turkish airlines svcs,Transportation
+singapore airlines,Transportation
+singapore airlines direct debit,Transportation
+cathay pacific,Transportation
+cathay pacific direct debit,Transportation
+ana all nippon,Transportation
+ana all nippon direct debit,Transportation
+japan airlines,Transportation
+japan airlines svcs,Transportation
+korean air,Transportation
+korean air #8832,Transportation
+asiana airlines,Transportation
+asiana airlines direct debit,Transportation
+china southern,Transportation
+china southern direct debit,Transportation
+china eastern,Transportation
+china eastern direct debit,Transportation
+air china,Transportation
+air china direct debit,Transportation
+hainan airlines,Transportation
+hainan airlines store,Transportation
+air india,Transportation
+air india payment,Transportation
+qantas,Transportation
+qantas #8832,Transportation
+air new zealand,Transportation
+air new zealand ltd,Transportation
+virgin australia,Transportation
+virgin australia payment,Transportation
+air canada,Transportation
+air canada svcs,Transportation
+westjet,Transportation
+westjet direct debit,Transportation
+porter airlines,Transportation
+porter airlines svcs,Transportation
+aeromexico,Transportation
+aeromexico svcs,Transportation
+latam airlines,Transportation
+latam airlines bill,Transportation
+avianca,Transportation
+avianca bill,Transportation
+copa airlines,Transportation
+copa airlines direct debit,Transportation
+gol linhas aereas,Transportation
+gol linhas aereas bill,Transportation
+azul brazilian,Transportation
+azul brazilian direct debit,Transportation
+aerolineas argentinas,Transportation
+aerolineas argentinas ltd,Transportation
+via rail canada,Transportation
+via rail canada svcs,Transportation
+eurostar,Transportation
+eurostar bill,Transportation
+thalys,Transportation
+thalys svcs,Transportation
+sncf,Transportation
+sncf store,Transportation
+deutsche bahn,Transportation
+deutsche bahn direct debit,Transportation
+renfe,Transportation
+renfe bill,Transportation
+trenitalia,Transportation
+trenitalia direct debit,Transportation
+öbb,Transportation
+öbb svcs,Transportation
+sbb cff ffs,Transportation
+sbb cff ffs direct debit,Transportation
+jr group,Transportation
+jr group svcs,Transportation
+amtrak northeast regional,Transportation
+amtrak northeast regional direct debit,Transportation
+amtrak acela,Transportation
+amtrak acela ltd,Transportation
+amtrak silver meteor,Transportation
+amtrak silver meteor ltd,Transportation
+amtrak empire builder,Transportation
+amtrak empire builder store,Transportation
+amtrak california zephyr,Transportation
+amtrak california zephyr direct debit,Transportation
+amtrak southwest chief,Transportation
+amtrak southwest chief #8832,Transportation
+greyhound canada,Transportation
+greyhound canada svcs,Transportation
+coach usa,Transportation
+coach usa bill,Transportation
+megabus uk,Transportation
+megabus uk direct debit,Transportation
+national express,Transportation
+national express svcs,Transportation
+flixbus,Transportation
+flixbus ltd,Transportation
+blablacar,Transportation
+blablacar store,Transportation
+bolt ride,Transportation
+bolt ride bill,Transportation
+free now,Transportation
+free now store,Transportation
+gett,Transportation
+gett bill,Transportation
+cabify,Transportation
+cabify ltd,Transportation
+ola cabs,Transportation
+ola cabs direct debit,Transportation
+grab,Transportation
+grab payment,Transportation
+gojek,Transportation
+gojek direct debit,Transportation
+careem,Transportation
+careem svcs,Transportation
+yandex go,Transportation
+yandex go payment,Transportation
+didi chuxing,Transportation
+didi chuxing ltd,Transportation
+beat ride,Transportation
+beat ride store,Transportation
+heetch,Transportation
+heetch #8832,Transportation
+kapten,Transportation
+kapten bill,Transportation
+wheely,Transportation
+wheely payment,Transportation
+blacklane,Transportation
+blacklane #8832,Transportation
+groundlink,Transportation
+groundlink ltd,Transportation
+supershuttle,Transportation
+supershuttle store,Transportation
+execucar,Transportation
+execucar ltd,Transportation
+carmel car & limo,Transportation
+carmel car & limo #8832,Transportation
+dial 7,Transportation
+dial 7 bill,Transportation
+lyft pink,Transportation
+lyft pink payment,Transportation
+uber one,Transportation
+uber one ltd,Transportation
+citi bike,Transportation
+citi bike store,Transportation
+divvy bikes,Transportation
+divvy bikes svcs,Transportation
+bluebikes,Transportation
+bluebikes svcs,Transportation
+capital bikeshare,Transportation
+capital bikeshare bill,Transportation
+bay wheels,Transportation
+bay wheels payment,Transportation
+biki,Transportation
+biki store,Transportation
+indego,Transportation
+indego #8832,Transportation
+bublr bikes,Transportation
+bublr bikes payment,Transportation
+nice ride minnesota,Transportation
+nice ride minnesota svcs,Transportation
+metro bike share,Transportation
+metro bike share direct debit,Transportation
+ford gobike,Transportation
+ford gobike ltd,Transportation
+cvs health clinic,Transportation
+cvs health clinic payment,Health
+minuteclinic,Health
+minuteclinic #8832,Health
+walgreens health,Health
+walgreens health payment,Health
+rite aid pharmacy,Health
+rite aid pharmacy store,Health
+duane reade,Health
+duane reade payment,Health
+boots pharmacy,Health
+boots pharmacy svcs,Health
+superdrug pharmacy,Health
+superdrug pharmacy store,Health
+lloydspharmacy,Health
+lloydspharmacy bill,Health
+well pharmacy,Health
+well pharmacy #8832,Health
+shoppers drug mart,Health
+shoppers drug mart svcs,Health
+rexall,Health
+rexall store,Health
+london drugs,Health
+london drugs #8832,Health
+jean coutu,Health
+jean coutu #8832,Health
+pharmaprix,Health
+pharmaprix payment,Health
+familiprix,Health
+familiprix bill,Health
+uniprix,Health
+uniprix direct debit,Health
+brunet,Health
+brunet direct debit,Health
+proxim,Health
+proxim #8832,Health
+chemist warehouse,Health
+chemist warehouse ltd,Health
+priceline pharmacy,Health
+priceline pharmacy ltd,Health
+terrywhite chemmart,Health
+terrywhite chemmart payment,Health
+guardian pharmacy,Health
+amcal,Health
+discount drug stores,Health
+apollo pharmacy,Health
+medplus,Health
+netmeds,Health
+1mg,Health
+pharmeasy,Health
+ping an good doctor,Health
+alihealth,Health
+jd health,Health
+teladoc health,Health
+amwell,Health
+doctor on demand,Health
+mdlive,Health
+hims & hers health,Health
+roman health,Health
+lemonaid health,Health
+plushcare,Health
+zocdoc,Health
+healthline,Health
+webmd,Health
+medscape,Health
+mayo clinic care,Health
+cleveland clinic health,Health
+johns hopkins medicine,Health
+massachusetts general,Health
+mount sinai hospital,Health
+cedars-sinai medical center,Health
+ucla health,Health
+stanford health care,Health
+nyu langone health,Health
+northwell health,Health
+kaiser foundation,Health
+providence health,Health
+ascension health,Health
+commonspirit health,Health
+trinity health,Health
+banner health,Health
+intermountain healthcare,Health
+geisinger health,Health
+spectrum health,Health
+henry ford health,Health
+cleveland clinic ohio,Health
+upmc health system,Health
+jefferson health,Health
+penn medicine,Health
+temple health,Health
+main line health,Health
+virtua health,Health
+cooper university health care,Health
+hackensack meridian health,Health
+rwjbarnabas health,Health
+atlantic health system,Health
+summit health,Health
+citymd,Health
+gohealth urgent care,Health
+medpost,Health
+patient first,Health
+nextcare urgent care,Health
+fastmed urgent care,Health
+american family care,Health
+carespot urgent care,Health
+concentra urgent care,Health
+u.s. healthworks,Health
+nova medical centers,Health
+five guys burgers,Dining Out
+fatburger,Dining Out
+steak 'n shake,Dining Out
+checkers drive-in,Dining Out
+rally's,Dining Out
+hardee's,Dining Out
+carl's jr.,Dining Out
+white castle,Dining Out
+krystal,Dining Out
+cook out,Dining Out
+hooters,Dining Out
+twin peaks,Dining Out
+miller's ale house,Dining Out
+yard house,Dining Out
+bj's restaurant & brewhouse,Dining Out
+california pizza kitchen,Dining Out
+blaze pizza,Dining Out
+mod pizza,Dining Out
+pieology,Dining Out
+mellow mushroom,Dining Out
+papa john's,Dining Out
+little caesars,Dining Out
+marco's pizza,Dining Out
+jet's pizza,Dining Out
+hungry howie's,Dining Out
+round table pizza,Dining Out
+mountain mike's,Dining Out
+godfather's pizza,Dining Out
+chuck e. cheese,Dining Out
+dave & buster's restaurant,Dining Out
+main event entertainment,Dining Out
+topgolf food & beverage,Dining Out
+panda express,Dining Out
+p.f. chang's,Dining Out
+pei wei asian diner,Dining Out
+benihana,Dining Out
+gyu-kaku japanese bbq,Dining Out
+wagamama,Dining Out
+yo! sushi,Dining Out
+itsu,Dining Out
+wasabi,Dining Out
+del taco,Dining Out
+taco john's,Dining Out
+taco cabana,Dining Out
+el pollo loco,Dining Out
+chuy's,Dining Out
+on the border,Dining Out
+pappasito's cantina,Dining Out
+uncle julio's,Dining Out
+rosa mexicano,Dining Out
+torchy's tacos,Dining Out
+velvet taco,Dining Out
+condado tacos,Dining Out
+fogo de chão,Dining Out
+texas de brazil,Dining Out
+rodizio grill,Dining Out
+ruth's chris steak house,Dining Out
+morton's the steakhouse,Dining Out
+the capital grille,Dining Out
+fleming's prime steakhouse,Dining Out
+stk steakhouse,Dining Out
+del frisco's,Dining Out
+ocean prime,Dining Out
+eddie v's prime seafood,Dining Out
+mccormick & schmick's,Dining Out
+legal sea foods,Dining Out
+joe's crab shack,Dining Out
+bubba gump shrimp co.,Dining Out
+red lobster,Dining Out
+captain d's,Dining Out
+long john silver's,Dining Out
+arthur treacher's,Dining Out
+ivar's,Dining Out
+anthony's homeport,Dining Out
+the old spaghetti factory,Dining Out
+maggiano's little italy,Dining Out
+buca di beppo,Dining Out
+carrabba's italian grill,Dining Out
+bertucci's,Dining Out
