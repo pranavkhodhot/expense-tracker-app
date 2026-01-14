@@ -7,12 +7,14 @@ const RegisterPage = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [reEnterPassword, setReEnterPassword] = useState('')
     const [error, setError] = useState<string | null>(null)
     const router = useRouter()
     const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault()
-    
-        try {
+
+        if(password === reEnterPassword){
+          try {
           const response = await fetch('http://127.0.0.1:8000/auth/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -26,6 +28,9 @@ const RegisterPage = () => {
           router.push('/login')
         } catch (err: any) {
           setError(err.message || 'Register failed')
+        }
+        } else {
+          alert('Passwords do not match')
         }
       }
 
@@ -81,8 +86,8 @@ const RegisterPage = () => {
             <input
               type="password"
               placeholder="••••••••"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              value={reEnterPassword}
+              onChange={(e) => setReEnterPassword(e.target.value)}
               required
               className="w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
