@@ -133,187 +133,210 @@ const DashboardPage = () => {
   };
 
   return (
-    <>
-      <Sidebar />
-      <div className="flex-1 sm:ml-64 p-6 bg-gray-100 min-h-screen transition-all duration-300">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold text-gray-800">
-            Welcome, {data.user.name.split(" ")[0]} 👋
+  <>
+    <Sidebar />
+
+    {/* Main Container */}
+    <div className="flex-1 sm:ml-64 p-8 bg-gradient-to-br from-gray-50 via-white to-gray-100 min-h-screen transition-all duration-300">
+
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10">
+        <div>
+          <h1 className="text-4xl font-extrabold text-gray-800 tracking-tight">
+            Welcome back,{" "}
+            <span className="text-green-700">
+              {data.user.name.split(" ")[0]} 👋
+            </span>
           </h1>
-          <div className="flex gap-5">
-            <button
-              onClick={openModal}
-              className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out cursor-pointer"
-            >
-              Add Transaction
-            </button>
-          </div>
+          <p className="text-gray-500 mt-1 text-sm">
+            Here’s an overview of your spending and budgets.
+          </p>
         </div>
-        <Modal isOpen={isModalOpen} onClose={closeModal}>
-          <h2 className="text-2xl font-semibold mb-6 text-center">
-            Add Transaction
+
+        <button
+          onClick={openModal}
+          className="mt-5 sm:mt-0 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-transform transform hover:scale-[1.03] focus:ring-4 focus:ring-green-300"
+        >
+          + Add Transaction
+        </button>
+      </div>
+
+      {/* Overview Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div className="bg-white shadow-lg rounded-xl p-6 border border-gray-100 hover:shadow-xl transition-all">
+          <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+            Total Expenses
           </h2>
-          <form onSubmit={addTransaction}>
-            <label htmlFor="">
-              Transaction Name <span className="required">*</span>
+          <p className="text-3xl font-extrabold text-gray-900 mt-2">
+            ${totalExpenses.toFixed(2)}
+          </p>
+        </div>
+
+        <div className="bg-white shadow-lg rounded-xl p-6 border border-gray-100 hover:shadow-xl transition-all">
+          <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+            Active Budgets
+          </h2>
+          <p className="text-3xl font-extrabold text-gray-900 mt-2">
+            {data.budgets.length}
+          </p>
+        </div>
+
+        <div className="bg-white shadow-lg rounded-xl p-6 border border-gray-100 hover:shadow-xl transition-all">
+          <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+            Categories Used
+          </h2>
+          <p className="text-3xl font-extrabold text-gray-900 mt-2">
+            {[...new Set(data.transactions.map((t) => t.category_name))].length}
+          </p>
+        </div>
+      </div>
+
+      {/* Transactions Section */}
+      <div className="bg-white shadow-lg rounded-xl p-6 border border-gray-100">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-lg font-bold text-gray-800">Recent Transactions</h2>
+          <p className="text-sm text-gray-500">
+            {data.transactions.length} total
+          </p>
+        </div>
+
+        {/* Table */}
+        <div className="overflow-x-auto">
+          <table className="min-w-full border-collapse">
+            <thead>
+              <tr className="bg-gray-50 border-b text-gray-600 text-sm uppercase">
+                <th className="py-3 px-4 text-left">Name</th>
+                <th className="py-3 px-4 text-left">Category</th>
+                <th className="py-3 px-4 text-left">Amount</th>
+                <th className="py-3 px-4 text-left">Date</th>
+                <th className="py-3 px-4 text-left"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.transactions.map((t) => (
+                <tr
+                  key={t.transaction_id}
+                  className="border-b hover:bg-gray-50 transition-all duration-200"
+                >
+                  <td className="py-3 px-4 font-medium text-gray-700">
+                    {t.transaction_name}
+                  </td>
+                  <td className="py-3 px-4">
+                    <span className="px-3 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-700">
+                      {t.category_name}
+                    </span>
+                  </td>
+                  <td className="py-3 px-4 font-semibold text-gray-800">
+                    ${t.amount.toFixed(2)}
+                  </td>
+                  <td className="py-3 px-4 text-gray-500">
+                    {new Date(t.transaction_date).toLocaleDateString()}
+                  </td>
+                  <td className="py-3 px-4">
+                    <button
+                      onClick={openModal}
+                      className="bg-green-600 flex items-center justify-center hover:bg-green-600 rounded-lg px-3 py-2 transition-all"
+                    >
+                      <img src="/Delete.svg" alt="Delete" width={18} height={18} />
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Add Transaction Modal */}
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">
+          Add New Transaction
+        </h2>
+        <form onSubmit={addTransaction} className="space-y-5">
+          <div>
+            <label className="block text-sm font-medium text-gray-600 mb-1">
+              Transaction Name
             </label>
-            <br />
             <input
               type="text"
               name="transaction-name"
-              id="transaction-name"
-              className="w-full px-4 py-2 my-2 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none"
+              placeholder="e.g., Starbucks Coffee"
               required
             />
-            <br />
-            <label htmlFor="">
-              Transaction Category <span className="required">*</span>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-600 mb-1">
+                Amount
+              </label>
+              <input
+                type="number"
+                name="transaction-amount"
+                step="0.01"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none"
+                placeholder="e.g., 12.50"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-600 mb-1">
+                Date
+              </label>
+              <input
+                type="date"
+                name="transaction-date"
+                max={formattedDate}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none"
+                required
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-600 mb-1">
+              Category
             </label>
-            <br />
             <select
               name="transaction-category"
-              id="transaction-category"
-              className="w-full px-2 py-2 my-2 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              defaultValue="Select your option"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none"
               required
             >
-              <option value="Select your option" disabled>
-                Select your option
+              <option value="" disabled selected>
+                Select category
               </option>
-              {categories?.map((category) => (
-                <option
-                  key={category.category_id}
-                  value={category.category_name}
-                >
-                  {category.category_name}
+              {categories?.map((c) => (
+                <option key={c.category_id} value={c.category_name}>
+                  {c.category_name}
                 </option>
               ))}
             </select>
-            <br />
-            <label htmlFor="">
-              Transaction Amount <span className="required">*</span>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-600 mb-1">
+              Notes
             </label>
-            <br />
-            <input
-              type="number"
-              name="transaction-amount"
-              id="transaction-amount"
-              min="0"
-              step=".01"
-              className="w-full px-4 py-2 my-2 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              required
-            />
-            <br />
-            <label htmlFor="">
-              Transaction Date <span className="required">*</span>
-            </label>
-            <br />
-            <input
-              type="date"
-              name="transaction-date"
-              id="transaction-date"
-              className="px-4 py-2 border border-gray-300 rounded-md my-2"
-              max={formattedDate}
-              required
-            />
-            <br />
-            <label htmlFor="">Transaction Notes</label>
-            <br />
-            <input
-              type="textarea"
+            <textarea
               name="transaction-notes"
-              id="transaction-notes"
-              className="w-full pb-12 px-2 pt-2 my-2 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none"
+              placeholder="Optional notes..."
             />
-            <br />
-            <div className="justify-self-center my-2">
-              <button className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out cursor-pointer justify-center">
-                Add Transaction
-              </button>
-            </div>
-          </form>
-        </Modal>
-        {/* Overview Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-          <div className="bg-white shadow rounded-lg p-6">
-            <h2 className="text-lg font-semibold text-gray-700 mb-2">
-              Total Expenses
-            </h2>
-            <p className="text-2xl font-bold text-gray-900">
-              ${totalExpenses.toFixed(2)}
-            </p>
           </div>
 
-          <div className="bg-white shadow rounded-lg p-6">
-            <h2 className="text-lg font-semibold text-gray-700 mb-2">
-              Active Budgets
-            </h2>
-            <p className="text-2xl font-bold text-gray-900">
-              {data.budgets.length}
-            </p>
-          </div>
+          <button
+            type="submit"
+            className="w-full py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-md transition-transform transform hover:scale-[1.02] focus:ring-4 focus:ring-green-300"
+          >
+            Add Transaction
+          </button>
+        </form>
+      </Modal>
+    </div>
+  </>
+);
+}
 
-          <div className="bg-white shadow rounded-lg p-6">
-            <h2 className="text-lg font-semibold text-gray-700 mb-2">
-              Recent Categories
-            </h2>
-            <p className="text-2xl font-bold text-gray-900">
-              {
-                [...new Set(data.transactions.map((t) => t.category_name))]
-                  .length
-              }
-            </p>
-          </div>
-        </div>
-
-        {/* Transactions Table */}
-        <div className="bg-white shadow rounded-lg p-6">
-          <h2 className="text-lg font-semibold text-gray-700 mb-4">
-            Recent Transactions
-          </h2>
-          <div className="overflow-x-auto">
-            <table className="min-w-full table-auto">
-              <thead>
-                <tr className="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
-                  <th className="py-3 px-6 text-left">Name</th>
-                  <th className="py-3 px-6 text-left">Category</th>
-                  <th className="py-3 px-6 text-left">Amount</th>
-                  <th className="py-3 px-6 text-left">Date</th>
-                  <th className="py-3 px-6 text-left"></th>
-                </tr>
-              </thead>
-              <tbody className="text-gray-700 text-sm font-light">
-                {data.transactions.map((t) => (
-                  <tr
-                    key={t.transaction_id}
-                    className="border-b border-gray-200 hover:bg-gray-50"
-                  >
-                    <td className="py-3 px-6">{t.transaction_name}</td>
-                    <td className="py-3 px-6">{t.category_name}</td>
-                    <td className="py-3 px-6 font-semibold">${t.amount}</td>
-                    <td className="py-3 px-6">{t.transaction_date}</td>
-                    <td className="py-3 pl-6">
-                      <button
-                        onClick={openModal}
-                        className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out cursor-pointer"
-                      >
-                        <img
-                          src="Delete.svg"
-                          alt="Delete"
-                          width={20}
-                          height={20}
-                        />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
 
 export default DashboardPage;
