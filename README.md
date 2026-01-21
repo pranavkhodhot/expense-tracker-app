@@ -60,7 +60,7 @@ Response:
   "predicted_category": "Dining Out",
   "confidence": 0.87
 }
-
+```
 ## ⚙️ Installation and Setup
 
 Follow these steps to set up and run the Finance Tracker locally:
