@@ -10,7 +10,7 @@ from app.core.dependencies import get_current_user
 
 router = APIRouter()
 
-@router.get("/me")
+@router.get("/me", status_code=200)
 def get_user_dashboard(
     db: Session = Depends(get_db),
     current_user: user_model = Depends(get_current_user)
