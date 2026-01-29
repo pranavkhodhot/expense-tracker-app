@@ -142,6 +142,7 @@ const ExpensesPage = () => {
       const response = await fetch("http://localhost:8000/transactions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify(transactionValues),
       });
       console.log(response);

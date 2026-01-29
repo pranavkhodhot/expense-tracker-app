@@ -22,8 +22,18 @@ def test_register_user_success(client, db_session):
 
 def test_register_user_duplicate_email(client):
     payload = {
-        "email": "testuser@example.com",
-        "password": "StrongPassword123!",
+        "email": "test@example.com",
+        "password": "password123",
+        "name": "Test User"
+    }
+
+    response = client.post("/auth/register", json=payload)
+
+    assert response.status_code == 201
+
+    payload = {
+        "email": "test@example.com",
+        "password": "password123",
         "name": "Test User"
     }
 
@@ -32,6 +42,14 @@ def test_register_user_duplicate_email(client):
     assert response.status_code == 401
 
 def test_login_with_correct_credentials(client):
+    payload = {
+        "email": "testuser@example.com",
+        "password": "StrongPassword123!",
+        "name": "Test User"
+    }
+
+    response = client.post("/auth/register", json=payload)
+
     payload = {
         "email": "testuser@example.com",
         "password": "StrongPassword123!",
@@ -64,6 +82,14 @@ def test_protected_route_requires_auth(client):
     assert data["detail"] == "No authentication token provided in cookies."
 
 def test_logout(client):
+    payload = {
+        "email": "testuser@example.com",
+        "password": "StrongPassword123!",
+        "name": "Test User"
+    }
+
+    response = client.post("/auth/register", json=payload)
+
     payload = {
         "email": "testuser@example.com",
         "password": "StrongPassword123!",

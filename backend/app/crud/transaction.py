@@ -5,9 +5,9 @@ from datetime import datetime
 from sqlalchemy.orm import joinedload
 from decimal import Decimal
 
-def create_transaction(db: Session, transaction: TransactionCreate):
+def create_transaction(db: Session, transaction: TransactionCreate, user_id: int):
     db_transaction = Transaction(
-        user_id=transaction.user_id,
+        user_id=user_id,
         category_id=transaction.category_id,
         transaction_name=transaction.transaction_name,
         amount=Decimal(transaction.amount),

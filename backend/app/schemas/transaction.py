@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from datetime import date, datetime
 from decimal import Decimal
 from typing import Optional
@@ -10,8 +10,12 @@ class TransactionBase(BaseModel):
     transaction_date: date
     notes: str
 
-class TransactionCreate(TransactionBase):
-    user_id: int 
+class TransactionCreate(BaseModel):
+    transaction_name: str
+    category_id: int
+    amount: Decimal
+    transaction_date: date
+    notes: str
 
 class TransactionUpdate(TransactionBase):
     transaction_name: Optional[str] = None
@@ -24,5 +28,4 @@ class TransactionOut(TransactionBase):
     transaction_id: int
     category_name: str
     created_at: datetime
-    class Config:
-        orm_mode = True  
+    model_config = ConfigDict(from_attributes=True)
