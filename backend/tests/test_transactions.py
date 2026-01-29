@@ -2,10 +2,7 @@ from app.models.transaction import Transaction
 from app.models.category import Category
 from app.models.user import User
 from datetime import datetime
-currentDateAndTime = datetime.now()
-currentTime = currentDateAndTime.strftime("%H:%M:%S")
-currentTime = filter(lambda x: x  != ":",currentTime)
-currentTime = "".join(currentTime)
+
 
 
 def test_create_transaction(auth_client, db_session):
