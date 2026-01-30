@@ -76,7 +76,7 @@ def update_budget(db: Session, budget_id: int, budget_update: BudgetUpdate):
     if not budget:
         return None
     
-    for key, value in budget_update.dict(exclude_unset=True).items():
+    for key, value in budget_update.model_dump(exclude_unset=True).items():
         if key == "amount" and value is not None:
             value = float(value)
         setattr(budget, key, value)

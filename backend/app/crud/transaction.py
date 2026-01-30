@@ -43,7 +43,7 @@ def update_transaction(db: Session, transaction_id: int, transaction_update: Tra
     if not transaction:
         return None
     
-    for key, value in transaction_update.dict(exclude_unset=True).items():
+    for key, value in transaction_update.model_dump(exclude_unset=True).items():
         if key == "amount" and value is not None:
             value = float(value)
         setattr(transaction, key, value)
