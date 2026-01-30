@@ -49,7 +49,7 @@ def client(db_session):
 def test_user(db_session):
     user = User(
         email="test@example.com",
-        password_hash=hash_password("123"),
+        password_hash="123",
         name="Test User"
     )
     db_session.add(user)
