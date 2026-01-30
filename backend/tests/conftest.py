@@ -46,25 +46,9 @@ def client(db_session):
     app.dependency_overrides.clear()
 
 @pytest.fixture()
-def test_user(db_session):
-    user = User(
-        email="test@example.com",
-        password_hash="123",
-        name="Test User"
-    )
-    db_session.add(user)
-    db_session.commit()
-    db_session.refresh(user)
-    return user
-
-@pytest.fixture()
 def user_factory(db_session):
     def create_user(name="test", email="test@example.com", password="123"):
-        user = User(
-            name=name,
-            email=email,
-            password_hash=hash_password(password),
-        )
+        user = User(name=name, email=email, password_hash=hash_password(password))
         db_session.add(user)
         db_session.commit()
         db_session.refresh(user)
