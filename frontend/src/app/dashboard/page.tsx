@@ -324,13 +324,6 @@ const DashboardPage = () => {
               placeholder="Optional notes..."
             />
           </div>
-
-          <button
-            type="submit"
-            className="w-full py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-md transition-transform transform hover:scale-[1.02] focus:ring-4 focus:ring-green-300"
-          >
-            Add Transaction
-          </button>
         </form>
       </Modal>
     </div>
