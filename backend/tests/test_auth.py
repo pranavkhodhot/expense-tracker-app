@@ -1,7 +1,7 @@
 def test_register_user_success(client, db_session):
     payload = {
         "email": "testuser@example.com",
-        "password": "StrongPassword123!",
+        "password": "123",
         "name": "Test User"
     }
 
@@ -23,7 +23,7 @@ def test_register_user_success(client, db_session):
 def test_register_user_duplicate_email(client):
     payload = {
         "email": "test@example.com",
-        "password": "password123",
+        "password": "123",
         "name": "Test User"
     }
 
@@ -33,7 +33,7 @@ def test_register_user_duplicate_email(client):
 
     payload = {
         "email": "test@example.com",
-        "password": "password123",
+        "password": "123",
         "name": "Test User"
     }
 
@@ -44,7 +44,7 @@ def test_register_user_duplicate_email(client):
 def test_login_with_correct_credentials(client):
     payload = {
         "email": "testuser@example.com",
-        "password": "StrongPassword123!",
+        "password": "123",
         "name": "Test User"
     }
 
@@ -52,7 +52,7 @@ def test_login_with_correct_credentials(client):
 
     payload = {
         "email": "testuser@example.com",
-        "password": "StrongPassword123!",
+        "password": "123",
     }
 
     response = client.post("/auth/login", json=payload)
@@ -66,7 +66,7 @@ def test_login_with_correct_credentials(client):
 def test_login_with_incorrect_credentials(client):
     payload = {
         "email": "testuser@example.com",
-        "password": "NotStrongPassword123!",
+        "password": "123",
     }
 
     response = client.post("/auth/login", json=payload)
@@ -84,7 +84,7 @@ def test_protected_route_requires_auth(client):
 def test_logout(client):
     payload = {
         "email": "testuser@example.com",
-        "password": "StrongPassword123!",
+        "password": "123",
         "name": "Test User"
     }
 
@@ -92,7 +92,7 @@ def test_logout(client):
 
     payload = {
         "email": "testuser@example.com",
-        "password": "StrongPassword123!",
+        "password": "123",
     }
 
     response = client.post("/auth/login", json=payload)

@@ -159,7 +159,7 @@ def test_user_cant_access_another_user_budget(auth_client, db_session):
 
     payload = {
         "email": "another@example.com",
-        "password": "StrongPassword123!",
+        "password": "123",
         "name": "Test User"
     }
 
@@ -167,7 +167,7 @@ def test_user_cant_access_another_user_budget(auth_client, db_session):
 
     payload = {
         "email": "another@example.com",
-        "password": "StrongPassword123!",
+        "password": "123",
     }
 
     response = auth_client.post("/auth/login", json=payload)
