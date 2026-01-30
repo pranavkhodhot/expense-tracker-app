@@ -49,7 +49,7 @@ def client(db_session):
 def test_user(db_session):
     user = User(
         email="test@example.com",
-        password_hash=hash_password("password123"),
+        password_hash=hash_password("123"),
         name="Test User"
     )
     db_session.add(user)
@@ -59,7 +59,7 @@ def test_user(db_session):
 
 @pytest.fixture()
 def user_factory(db_session):
-    def create_user(name="test", email="test@example.com", password="password123"):
+    def create_user(name="test", email="test@example.com", password="123"):
         user = User(
             name=name,
             email=email,
@@ -78,7 +78,7 @@ def auth_client(client, user_factory):
 
     response = client.post(
         "/auth/login",
-        json={"email": user.email, "password": "password123"}
+        json={"email": user.email, "password": "123"}
     )
 
     assert response.status_code == 200
