@@ -24,7 +24,7 @@ pytest-asyncio
 # --- Maachine Learning ---
 joblib
 pandas
-sklearn
+scikit-learn
 
 # --- Misc ---
 python-dotenv
