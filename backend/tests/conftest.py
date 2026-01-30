@@ -7,9 +7,10 @@ from app.database import Base, get_db
 from app.main import app
 from app.core.security import hash_password
 from app.models.user import User
+import os
 
 
-TEST_DATABASE_URL = "postgresql+psycopg2://owner:password@localhost/expense_tracker_test"
+TEST_DATABASE_URL = os.getenv("TEST_DATABASE_URL")
 
 engine = create_engine(TEST_DATABASE_URL)
 TestingSessionLocal = sessionmaker(bind=engine)
