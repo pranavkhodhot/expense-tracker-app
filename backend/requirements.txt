@@ -12,7 +12,7 @@ python-jose[cryptography]
 passlib[bcrypt]
 
 # --- Validation / Schemas ---
-pydantic
+pydantic[email]
 
 # --- HTTP / Requests ---
 httpx
