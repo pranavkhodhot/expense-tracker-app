@@ -37,6 +37,7 @@ const BudgetCard = ({ id, category, amount, amount_spent, update }: BudgetProps)
         const response = await fetch(`http://localhost:8000/budgets/${id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
+          credentials: "include",
           body: JSON.stringify(budgetValues),
         });
         console.log(response);
@@ -53,6 +54,7 @@ const BudgetCard = ({ id, category, amount, amount_spent, update }: BudgetProps)
         const response = await fetch(`http://localhost:8000/budgets/${id}`, {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
+          credentials: "include",
         });
         console.log(response);
       } catch (error) {

@@ -10,18 +10,11 @@ from app.core.dependencies import get_current_user
 
 router = APIRouter()
 
-@router.get("/me")
-def get_user_dashboard(
-    db: Session = Depends(get_db),
-    current_user: user_model = Depends(get_current_user)
-):
-    """
-    Returns the logged-in user's profile, budgets, and recent transactions.
-    """
+@router.get("/me", status_code=200)
+def get_user_dashboard(db: Session = Depends(get_db), current_user: user_model = Depends(get_current_user)):
     budgets = budget_crud.get_budgets_for_user(db, user_id=current_user.user_id)
     transactions = transaction_crud.get_transactions_for_user(db, user_id=current_user.user_id)
 
-    # Sort transactions by date, latest first (optional)
     transactions = sorted(transactions, key=lambda t: t.transaction_date, reverse=True)
 
     return {

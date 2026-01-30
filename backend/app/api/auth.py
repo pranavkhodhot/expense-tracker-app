@@ -8,7 +8,7 @@ from fastapi.responses import JSONResponse
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
 
-@router.post("/login")
+@router.post("/login",status_code=200)
 def login_user(login_data: schemas.user.UserLogin, db: Session = Depends(get_db)):
     user = crud.user.authenticate_user(db, login_data.email, login_data.password)
     if not user:
@@ -17,7 +17,7 @@ def login_user(login_data: schemas.user.UserLogin, db: Session = Depends(get_db)
     access_token = create_access_token({"sub": user.email})
 
     response_data = {
-        "message": "Login successful",
+        "message": "Login Successful",
         "access_token": access_token,
         "user_id": user.user_id,
         "name": user.name,
@@ -35,16 +35,15 @@ def login_user(login_data: schemas.user.UserLogin, db: Session = Depends(get_db)
     )
     return response
 
-@router.post("/register")
+@router.post("/register", status_code=201)
 def register_user(register_data: schemas.user.UserCreate, db: Session = Depends(get_db)):
     user = crud.user.get_user_by_email(db, register_data.email)
     print(user)
     if user:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Email already registered to an account")
-    crud.user.create_user(db, register_data)
-    return "User registered successful"
+    return crud.user.create_user(db, register_data)
 
-@router.post("/logout")
+@router.post("/logout",status_code=200)
 def logout_user():
     response = JSONResponse({"message": "Logged out successfully"})
     response.delete_cookie(key="token")

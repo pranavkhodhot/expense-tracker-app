@@ -1,5 +1,4 @@
-from pydantic import BaseModel
-from datetime import date
+from pydantic import BaseModel, ConfigDict
 from decimal import Decimal
 from typing import Optional
 
@@ -9,7 +8,8 @@ class BudgetBase(BaseModel):
 
 
 class BudgetCreate(BudgetBase):
-    user_id: int 
+    category_id: int
+    amount: Decimal
 
 class BudgetUpdate(BaseModel):
     amount: Optional[Decimal] = None
@@ -18,5 +18,4 @@ class BudgetOut(BudgetBase):
     budget_id: int
     category_name: str
     
-    class Config:
-        orm_mode = True  
+    model_config = ConfigDict(from_attributes=True)

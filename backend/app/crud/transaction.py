@@ -5,9 +5,9 @@ from datetime import datetime
 from sqlalchemy.orm import joinedload
 from decimal import Decimal
 
-def create_transaction(db: Session, transaction: TransactionCreate):
+def create_transaction(db: Session, transaction: TransactionCreate, user_id: int):
     db_transaction = Transaction(
-        user_id=transaction.user_id,
+        user_id=user_id,
         category_id=transaction.category_id,
         transaction_name=transaction.transaction_name,
         amount=Decimal(transaction.amount),
@@ -43,7 +43,7 @@ def update_transaction(db: Session, transaction_id: int, transaction_update: Tra
     if not transaction:
         return None
     
-    for key, value in transaction_update.dict(exclude_unset=True).items():
+    for key, value in transaction_update.model_dump(exclude_unset=True).items():
         if key == "amount" and value is not None:
             value = float(value)
         setattr(transaction, key, value)

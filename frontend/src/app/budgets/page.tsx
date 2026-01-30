@@ -124,6 +124,7 @@ const BudgetPage = () => {
       const response = await fetch("http://localhost:8000/budgets", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify(budgetValues),
       });
       console.log(response);

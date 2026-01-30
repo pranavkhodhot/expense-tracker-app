@@ -67,6 +67,7 @@ const TransactionRow: React.FC<TransactionRowProps> = ({
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
+          credentials: "include",
           body: JSON.stringify(transactionValues),
         }
       );
@@ -90,6 +91,7 @@ const TransactionRow: React.FC<TransactionRowProps> = ({
           {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
+            credentials: "include",
           }
         );
         console.log(response);

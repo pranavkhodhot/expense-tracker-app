@@ -107,7 +107,6 @@ const DashboardPage = () => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const transactionValues = {
-      user_id: data.user.user_id,
       category_id: categories?.find(
         (object) =>
           object.category_name === formData.get("transaction-category")
@@ -122,7 +121,8 @@ const DashboardPage = () => {
       const response = await fetch("http://localhost:8000/transactions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(transactionValues),
+        credentials: "include",
+        body: JSON.stringify(transactionValues),       
       });
       console.log(response);
     } catch (error) {

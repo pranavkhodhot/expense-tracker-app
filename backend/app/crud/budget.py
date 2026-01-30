@@ -5,9 +5,9 @@ from app.schemas.budget import BudgetCreate, BudgetUpdate
 from datetime import date, timedelta
 from sqlalchemy.orm import joinedload
 
-def create_budget(db: Session, budget: BudgetCreate):
+def create_budget(db: Session, budget: BudgetCreate, user_id: int):
     db_budget = Budget(
-        user_id=budget.user_id,
+        user_id=user_id,
         category_id=budget.category_id,
         amount=float(budget.amount)
     )
@@ -76,7 +76,7 @@ def update_budget(db: Session, budget_id: int, budget_update: BudgetUpdate):
     if not budget:
         return None
     
-    for key, value in budget_update.dict(exclude_unset=True).items():
+    for key, value in budget_update.model_dump(exclude_unset=True).items():
         if key == "amount" and value is not None:
             value = float(value)
         setattr(budget, key, value)
@@ -84,15 +84,3 @@ def update_budget(db: Session, budget_id: int, budget_update: BudgetUpdate):
     db.commit()
     db.refresh(budget)
     return budget
-
-# def get_active_budgets_for_user(db: Session, user_id: int):
-#     today = date.today()
-#     return (
-#         db.query(Budget)
-#         .filter(
-#             Budget.user_id == user_id,
-#             Budget.start_date <= today,
-#             Budget.end_date >= today
-#         )
-#         .all()
-#     )
